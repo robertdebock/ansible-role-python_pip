@@ -6,7 +6,7 @@ Have Pythons PIP available.
 Requirements
 ------------
 
-This role required the EPEL repository to be available.
+This role required the EPEL repository to be available. robertdebock.epel can be used for that.
 
 Role Variables
 --------------
@@ -16,7 +16,7 @@ None known.
 Dependencies
 ------------
 
-roberdebock.epel
+- roberdebock.epel
 
 Example Playbook
 ----------------
