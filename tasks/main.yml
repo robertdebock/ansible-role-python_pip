@@ -1,8 +1,9 @@
 ---
 # tasks file for python-pip
 - name: install python-pip
-  yum:
+  package:
     name: python-pip
+    state: present
 
 - name: update pip
   pip:
@@ -11,6 +12,4 @@
 
 - name: install modules
   pip:
-    name: "{{ item }}"
-  with_items:
-    - pyyaml
+    name: pyyaml
