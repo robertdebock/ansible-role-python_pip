@@ -4,6 +4,15 @@
   package:
     name: python-pip
     state: present
+  when:
+    - ansible_distribution == "CentOS"
+
+- name: install py-pip
+  package:
+    name: python-pip
+    state: present
+  when:
+    - ansible_distribution == "Alpine"
 
 - name: update pip
   pip:
