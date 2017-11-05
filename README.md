@@ -1,4 +1,4 @@
-Role Name
+Python-pip
 =========
 
 Have Pythons PIP available.
@@ -6,7 +6,7 @@ Have Pythons PIP available.
 Requirements
 ------------
 
-This role required the EPEL repository to be available. robertdebock.epel can be used for that.
+This role required the EPEL repository to be available on RHEL/CentOS. robertdebock.epel can be used for that.
 
 Role Variables
 --------------
