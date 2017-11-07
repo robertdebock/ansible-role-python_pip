@@ -1,13 +1,13 @@
 ---
 # tasks file for python-pip
-- name: install python-pip
+- name: install python-pip on centos, debian or ubuntu
   package:
     name: python-pip
     state: present
   when:
     - ( ansible_distribution == "CentOS" or ansible_distribution == "Debian" or ansible_distribution == "Ubuntu" )
 
-- name: install py-pip
+- name: install py-pip on apine
   package:
     name: py-pip
     state: present
