@@ -1,5 +1,11 @@
 ---
 - hosts: localhost
   remote_user: root
+
   roles:
     - python-pip
+    
+  tasks:
+    - name: install a pip packages
+      pip:
+        name: pyyaml
