@@ -4,8 +4,8 @@
 
   roles:
     - python-pip
-    
+
   tasks:
     - name: install a pip packages
       pip:
-        name: pyyaml
+        name: ansible
