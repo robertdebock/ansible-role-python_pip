@@ -27,6 +27,8 @@ galaxy_info:
     - python
     - pip
     - py-pip
+    - system
+    - installer
     - alpine
     - debian
     - epel

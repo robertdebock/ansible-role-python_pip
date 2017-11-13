@@ -1,12 +1,14 @@
 Python-pip
 =========
 
-Have Pythons PIP available.
+Adds Pythons PIP to your system.
 
 Requirements
 ------------
 
-This role required the EPEL repository to be available on RHEL/CentOS. robertdebock.epel can be used for that.
+For Red Hat or CentOS systems this role required the EPEL repository to be available on RHEL/CentOS. robertdebock.epel can be used for that.
+Other systems typically have the required packages in their repositories.
+Adding the dependency robertdebock.epel only installs EPEL to Red Hat and CentOS systems, others will be skipped.
 
 Role Variables
 --------------
@@ -23,9 +25,17 @@ Example Playbook
 
 ```
 ---
-- hosts: servers
+- hosts: all
+
   roles:
     - python-pip
+
+  tasks:
+    - name: install a pip package
+      pip:
+        name: ansible
+        state: present
+```
 
 License
 -------
