@@ -1,4 +1,4 @@
-Python-pip
+ansible-role-python-pip
 =========
 
 Adds Pythons PIP to your system.
@@ -18,7 +18,7 @@ None known.
 Dependencies
 ------------
 
-- roberdebock.epel
+- roberdebock.ansible-role-epel
 
 Example Playbook
 ----------------
@@ -28,7 +28,7 @@ Example Playbook
 - hosts: all
 
   roles:
-    - python-pip
+    - ansible-role-python-pip
 
   tasks:
     - name: install a pip package

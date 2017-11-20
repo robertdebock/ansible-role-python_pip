@@ -1,9 +1,9 @@
 ---
-- hosts: all
-  remote_user: root
+- name: Converge
+  hosts: all
 
   roles:
-    - role: ansible-role-python-pip
+    - role: ansible-role-pip
 
   tasks:
     - name: install a pip packages
