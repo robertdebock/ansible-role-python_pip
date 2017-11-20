@@ -1,3 +1,5 @@
 ---
 - name: robertdebock.ansible-role-epel
   src: robertdebock.ansible-role-epel
+- name: robertdebock.ansible-role-scl
+  src: robertdebock.ansible-role-scl

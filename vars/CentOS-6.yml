@@ -1,0 +1,4 @@
+---
+packages:
+  - python27-python-pip
+executable: /opt/rh/python27/root/usr/bin/pip2.7
