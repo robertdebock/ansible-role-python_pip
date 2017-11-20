@@ -21,6 +21,11 @@
   when:
     - ansible_distribution == "CentOS"
     - ansible_distribution_major_version == "6"
+  register: addpython27toldconfig
+
+- name: run ldconfig
+  command: ldconfig
+  when: addpython27toldconfig.changed
 
 - name: update pip
   pip:
