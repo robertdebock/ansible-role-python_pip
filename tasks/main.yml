@@ -29,5 +29,6 @@
 - name: update pip
   pip:
     name: pip
-    state: "{{ version }}"
+    state: present
+    version: "{{ version }}"
     executable: "{{ executable | default(omit) }}"
