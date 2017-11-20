@@ -34,9 +34,10 @@ galaxy_info:
     - installer
     - alpine
     - debian
-    - epel
+    - centos
     - fedora
     - ubuntu
 
 dependencies:
   - robertdebock.ansible-role-epel
+  - robertdebock.ansible-role-scl
