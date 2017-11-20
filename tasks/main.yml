@@ -17,7 +17,6 @@
   copy:
     src: files/python27.conf
     dest: /etc/ld.so.conf.d/python27.ldconf
-  notify: run ldconfig
   when:
     - ansible_distribution == "CentOS"
     - ansible_distribution_major_version == "6"
