@@ -20,11 +20,10 @@
   when:
     - ansible_distribution == "CentOS"
     - ansible_distribution_major_version == "6"
-  register: addpython27toldconfig
+  notify: run ldconfig
 
-- name: run ldconfig
-  command: ldconfig
-  when: addpython27toldconfig.changed
+- name: run handlers
+  meta: flush_handlers
 
 - name: link pip
   file:
