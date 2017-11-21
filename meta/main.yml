@@ -41,3 +41,4 @@ galaxy_info:
 dependencies:
   - robertdebock.ansible-role-epel
   - robertdebock.ansible-role-scl
+  - robertdebock.ansible-role-buildtools
