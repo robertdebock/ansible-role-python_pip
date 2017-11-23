@@ -1,6 +1,8 @@
 ansible-role-python-pip
 =========
 
+[![Build Status](https://travis-ci.org/robertdebock/ansible-role-python-pip.svg?branch=master)](https://travis-ci.org/robertdebock/ansible-role-python-pip)
+
 Adds Pythons PIP to your system.
 
 Requirements
