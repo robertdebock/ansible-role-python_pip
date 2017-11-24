@@ -15,17 +15,14 @@
 
 - name: customize centos 6
   block:
-    - name: add python27 to ldconfig
-      copy:
+    - copy:
         src: files/python27.conf
         dest: /etc/ld.so.conf.d/python27.conf
       notify: run ldconfig
 
-    - name: run handlers
-      meta: flush_handlers
+    - meta: flush_handlers
 
-    - name: link pip
-      file:
+    - file:
         src: /opt/rh/python27/root/usr/bin/pip
         dest: /usr/bin/pip
         state: link
