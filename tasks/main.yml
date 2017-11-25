@@ -24,7 +24,7 @@
 
 - meta: flush_handlers
   when:
-  - ( ansible_distribution == "CentOS" or ansible_distribution == "Red Hat Enterprise Linux" )
+    - ( ansible_distribution == "CentOS" or ansible_distribution == "Red Hat Enterprise Linux" )
     - ansible_distribution_major_version == "6"
 
 - file:
@@ -32,7 +32,7 @@
     dest: /usr/bin/pip
     state: link
   when:
-  - ( ansible_distribution == "CentOS" or ansible_distribution == "Red Hat Enterprise Linux" )
+    - ( ansible_distribution == "CentOS" or ansible_distribution == "Red Hat Enterprise Linux" )
     - ansible_distribution_major_version == "6"
 
 - name: update pip
