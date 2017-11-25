@@ -13,22 +13,26 @@
     state: present
   with_items: "{{ packages }}"
 
-- name: customize centos 6
-  block:
-    - copy:
-        src: files/python27.conf
-        dest: /etc/ld.so.conf.d/python27.conf
-      notify: run ldconfig
-
-    - meta: flush_handlers
-
-    - file:
-        src: /opt/rh/python27/root/usr/bin/pip
-        dest: /usr/bin/pip
-        state: link
-
+- name: customize red hat enterprise linux and centos 6
+  copy:
+    src: files/python27.conf
+    dest: /etc/ld.so.conf.d/python27.conf
+  notify: run ldconfig
   when:
-    - ansible_distribution == "CentOS"
+    - ( ansible_distribution == "CentOS" or ansible_distribution == "Red Hat Enterprise Linux" )
+    - ansible_distribution_major_version == "6"
+
+- meta: flush_handlers
+  when:
+  - ( ansible_distribution == "CentOS" or ansible_distribution == "Red Hat Enterprise Linux" )
+    - ansible_distribution_major_version == "6"
+
+- file:
+    src: /opt/rh/python27/root/usr/bin/pip
+    dest: /usr/bin/pip
+    state: link
+  when:
+  - ( ansible_distribution == "CentOS" or ansible_distribution == "Red Hat Enterprise Linux" )
     - ansible_distribution_major_version == "6"
 
 - name: update pip
