@@ -35,7 +35,7 @@ Example Playbook
 - hosts: all
 
   roles:
-    - ansible-role-python-pip
+    - robertdebock.ansible-role-python-pip
 
   tasks:
     - name: install a pip package
@@ -43,6 +43,8 @@ Example Playbook
         name: ansible
         state: present
 ```
+
+Install this role using `galaxy install robertdebock.ansible-role-bootstrap`.
 
 License
 -------
