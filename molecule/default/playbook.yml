@@ -3,7 +3,7 @@
   hosts: all
 
   roles:
-    - role: python-pip
+    - role: ansible-role-python-pip
 
   tasks:
     - name: install a pip packages
