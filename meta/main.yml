@@ -40,6 +40,6 @@ galaxy_info:
     - ubuntu
 
 dependencies:
-  - robertdebock.ansible-role-epel
-  - robertdebock.ansible-role-scl
-  - robertdebock.ansible-role-buildtools
+  - robertdebock.epel
+  - robertdebock.scl
+  - robertdebock.buildtools
