@@ -37,11 +37,11 @@ galaxy_info:
     - py-pip
     - system
     - installer
-    - alpine
-    - debian
+    - Alpine
+    - Debian
     - centos
-    - fedora
-    - ubuntu
+    - Fedora
+    - Ubuntu
 
 dependencies:
   - robertdebock.epel
