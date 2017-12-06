@@ -11,7 +11,7 @@
   package:
     name: "{{ item }}"
     state: present
-  with_items: "{{ packages }}"
+  with_items: "{{ python_pip_packages }}"
 
 - name: customize red hat enterprise linux and centos 6
   copy:
@@ -41,5 +41,5 @@
   pip:
     name: pip
     state: present
-    version: "{{ version }}"
-    executable: "{{ executable | default(omit) }}"
+    version: "{{ python_pip_version }}"
+    executable: "{{ python_pip_executable | default(omit) }}"
