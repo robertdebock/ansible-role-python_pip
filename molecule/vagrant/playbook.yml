@@ -5,7 +5,7 @@
   gather_facts: no
 
   roles:
-    - role: ansible-role-python-pip
+    - role: robertdebock.python-pip
 
   tasks:
     - name: install a pip packages

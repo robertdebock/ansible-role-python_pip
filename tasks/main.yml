@@ -3,9 +3,9 @@
 - name: include distribution specific variables
   include_vars: "{{ item }}"
   with_first_found:
-    - "{{ ansible_distribution }}-{{ ansible_distribution_major_version }}.yml"
-    - "{{ ansible_distribution }}.yml"
-    - "default.yml"
+    - "python-pip.{{ ansible_distribution }}-{{ ansible_distribution_major_version }}.yml"
+    - "python-pip.{{ ansible_distribution }}.yml"
+    - "python-pip.default.yml"
 
 - name: install software
   package:
