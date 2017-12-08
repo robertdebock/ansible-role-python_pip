@@ -1,3 +1,14 @@
 ---
 # vars file for python-pip
 python_pip_version: 9.0.1
+
+python_pip_packages:
+  Alpine:
+    - py-pip
+  CentOS-6:
+    - python27-python-pip
+  default:
+    - python-pip
+
+python_pip_executable:
+  CentOS-6: /opt/rh/python27/root/usr/bin/pip2.7

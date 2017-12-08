@@ -1,17 +1,13 @@
 ---
 # tasks file for python-pip
-- name: include distribution specific variables
-  include_vars: "{{ item }}"
-  with_first_found:
-    - "python-pip.{{ ansible_distribution }}-{{ ansible_distribution_major_version }}.yml"
-    - "python-pip.{{ ansible_distribution }}.yml"
-    - "python-pip.default.yml"
-
 - name: install software
   package:
     name: "{{ item }}"
     state: present
-  with_items: "{{ python_pip_packages }}"
+  with_items:
+    - "{{ python_pip_packages[ansible_distribution ~ '-' ~ ansible_distribution_major_version]
+      | default(python_pip_packages[ansible_distribution]
+      | default(python_pip_packages['default'] )) }}"
 
 - name: customize red hat enterprise linux and centos 6
   copy:
@@ -42,4 +38,7 @@
     name: pip
     state: present
     version: "{{ python_pip_version }}"
-    executable: "{{ python_pip_executable | default(omit) }}"
+    executable: "{{ python_pip_executable[ansible_distribution ~ '-' ~ ansible_distribution_major_version]
+                | default(python_pip_executable[ansible_distribution]
+                | default(python_pip_executable['default']
+                | default(omit) )) }}"
