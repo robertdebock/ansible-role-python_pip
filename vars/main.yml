@@ -5,6 +5,7 @@ python_pip_version: 9.0.1
 python_pip_packages:
   Alpine:
     - py-pip
+    - python2-dev
   CentOS-6:
     - python27-python-pip
   default:
