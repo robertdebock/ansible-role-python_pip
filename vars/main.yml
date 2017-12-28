@@ -10,3 +10,6 @@ python_pip_packages:
     - python27-python-pip
   default:
     - python-pip
+
+python_pip_executable:
+  CentOS-6: /opt/rh/python27/root/usr/bin/pip

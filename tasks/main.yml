@@ -14,3 +14,7 @@
     name: pip
     state: present
     version: "{{ python_pip_version }}"
+    executable: "{{ python_pip_executable[ansible_distribution ~ '-' ~ ansible_distribution_major_version]
+                | default(python_pip_executable[ansible_distribution]
+                | default(python_pip_executable['default']
+                | default(omit) )) }}"
