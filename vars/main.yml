@@ -8,6 +8,7 @@ python_pip_packages:
     - python2-dev
   CentOS-6:
     - python27-python-pip
+    - python27-python-libs
   default:
     - python-pip
 

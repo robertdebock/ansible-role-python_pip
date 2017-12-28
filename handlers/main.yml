@@ -1,2 +1,4 @@
 ---
 # handlers file for python-pip
+- name: ldconfig
+  command: ldconfig
