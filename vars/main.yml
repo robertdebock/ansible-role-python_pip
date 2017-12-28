@@ -8,5 +8,3 @@ python_pip_packages:
     - python2-dev
   default:
     - python-pip
-python_pip_executable:
-  CentOS-6: /opt/rh/python27/root/usr/bin/pip2.7
