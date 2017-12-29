@@ -1,2 +1,3 @@
 ---
 # defaults file for python-pip
+python_pip_modules: []
