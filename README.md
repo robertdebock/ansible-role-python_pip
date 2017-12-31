@@ -36,12 +36,9 @@ Example Playbook
 
   roles:
     - robertdebock.python-pip
-
-  tasks:
-    - name: install a pip package
-      pip:
-        name: ansible
-        state: present
+      python_pip_modules:
+        - name: ansible
+        - version: 2.4.2.0
 ```
 
 Install this role using `galaxy install robertdebock.python-pip`.
