@@ -12,8 +12,6 @@ platforms:
     image: alpine:3.5
   - name: alpine-3.6-no-modules
     image: alpine:3.6
-  - name: centos-6-no-modules
-    image: centos:6
   - name: centos-7-no-modules
     image: centos:7
   - name: debian-jessie-no-modules
@@ -36,8 +34,6 @@ platforms:
     image: alpine:3.5
   - name: alpine-3.6
     image: alpine:3.6
-  - name: centos-6
-    image: centos:6
   - name: centos-7
     image: centos:7
   - name: debian-jessie

@@ -9,36 +9,15 @@
       | default(python_pip_packages[ansible_distribution]
       | default(python_pip_packages['default'] )) }}"
 
-- name: add custom path to ld.so.conf.d
-  copy:
-    src: files/python27.conf
-    dest: /etc/ld.so.conf.d/python27.conf
-  notify:
-    - ldconfig
-  when:
-    - ansible_distribution == "CentOS"
-    - ansible_distribution_major_version == "6"
-
-- name: flush handlers
-  meta: flush_handlers
-
 - name: update pip
   pip:
     name: pip
     state: present
     version: "{{ python_pip_version }}"
-    executable: "{{ python_pip_executable[ansible_distribution ~ '-' ~ ansible_distribution_major_version]
-                | default(python_pip_executable[ansible_distribution]
-                | default(python_pip_executable['default']
-                | default(omit) )) }}"
 
 - name: install requested modules
   pip:
     name: "{{ item.name }}"
     version: "{{ item.version | default(omit) }}"
-    executable: "{{ python_pip_executable[ansible_distribution ~ '-' ~ ansible_distribution_major_version]
-                | default(python_pip_executable[ansible_distribution]
-                | default(python_pip_executable['default']
-                | default(omit) )) }}"
   with_items:
     - "{{ python_pip_modules }}"
