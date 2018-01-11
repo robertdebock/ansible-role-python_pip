@@ -8,10 +8,10 @@ driver:
 lint:
   name: yamllint
 platforms:
-  - name: python-pip-alpine-3.5-no-modules
-    image: alpine:3.5
   - name: python-pip-alpine-3.6-no-modules
     image: alpine:3.6
+  - name: python-pip-alpine-3.7-no-modules
+    image: alpine:3.7
   - name: python-pip-centos-7-no-modules
     image: centos:7
   - name: python-pip-debian-jessie-no-modules
@@ -30,10 +30,10 @@ platforms:
     image: ubuntu:zesty
   - name: python-pip-ubuntu-artful-no-modules
     image: ubuntu:artful
-  - name: python-pip-alpine-3.5
-    image: alpine:3.5
   - name: python-pip-alpine-3.6
     image: alpine:3.6
+  - name: python-pip-alpine-3.7
+    image: alpine:3.7
   - name: python-pip-centos-7
     image: centos:7
   - name: python-pip-debian-jessie
