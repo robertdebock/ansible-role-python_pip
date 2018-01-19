@@ -10,22 +10,26 @@ galaxy_info:
     - name: Alpine
       versions:
         - all
+    - name: ArchLinux
+      version:
+        - all
+    - name: CentOS
+      version:
+        - 7
     - name: Debian
       versions:
         - all
-    - name: centos
-      version:
-        - 7
     - name: Fedora
       versions:
         - all
-    - name: opensuse
+    - name: OpenSUSE
       versions:
         - all
     - name: Ubuntu
       versions:
+        - trusty
+        - xenial
         - artful
-        - zesty
 
   galaxy_tags:
     - python
