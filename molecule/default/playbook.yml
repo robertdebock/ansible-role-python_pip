@@ -1,16 +1,9 @@
 ---
 - name: Converge no-modules
-  hosts: all:!*-no-modules
+  hosts: all
   gather_facts: no
 
   roles:
     - role: ansible-role-python-pip
       python_pip_modules:
         - name: jinja2
-
-- name: Converge with modules
-  hosts: "*-no-modules"
-  gather_facts: no
-
-  roles:
-    - role: ansible-role-python-pip

@@ -8,28 +8,8 @@ driver:
 lint:
   name: yamllint
 platforms:
-  - name: python-pip-alpine-3.6-no-modules
-    image: alpine:3.6
-  - name: python-pip-alpine-3.7-no-modules
-    image: alpine:3.7
-  - name: python-pip-centos-7-no-modules
-    image: centos:7
-  - name: python-pip-debian-jessie-no-modules
-    image: debian:jessie
-  - name: python-pip-debian-buster-no-modules
-    image: debian:buster
-  - name: python-pip-fedora-26-no-modules
-    image: fedora:26
-  - name: python-pip-fedora-27-no-modules
-    image: fedora:27
-  - name: python-pip-opensuse-42.2-no-modules
-    image: opensuse:42.2
-  - name: python-pip-opensuse-42.3-no-modules
-    image: opensuse:42.3
-  - name: python-pip-ubuntu-zesty-no-modules
-    image: ubuntu:zesty
-  - name: python-pip-ubuntu-artful-no-modules
-    image: ubuntu:artful
+  - name: python-pip-archlinux
+    image: base/archlinux
   - name: python-pip-alpine-3.6
     image: alpine:3.6
   - name: python-pip-alpine-3.7
@@ -38,6 +18,8 @@ platforms:
     image: centos:7
   - name: python-pip-debian-jessie
     image: debian:jessie
+  - name: python-pip-debian-stretch
+    image: debian:stretch
   - name: python-pip-debian-buster
     image: debian:buster
   - name: python-pip-fedora-26
@@ -48,8 +30,13 @@ platforms:
     image: opensuse:42.2
   - name: python-pip-opensuse-42.3
     image: opensuse:42.3
-  - name: python-pip-ubuntu-zesty
-    image: ubuntu:zesty
+    # 14.04 LTS
+  - name: python-pip-ubuntu-trusty
+    image: ubuntu:trusty
+    # 16.04 LTS
+  - name: python-pip-ubuntu-xenial
+    image: ubuntu:xenial
+    # 17.04
   - name: python-pip-ubuntu-artful
     image: ubuntu:artful
 provisioner:

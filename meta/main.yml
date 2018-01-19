@@ -13,8 +13,8 @@ galaxy_info:
     - name: Debian
       versions:
         - all
-    - name: EL
-      versions:
+    - name: centos
+      version:
         - 7
     - name: Fedora
       versions:
