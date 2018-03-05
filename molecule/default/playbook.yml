@@ -2,6 +2,7 @@
 - name: Converge no-modules
   hosts: all
   gather_facts: no
+  strategy: free
 
   roles:
     - role: ansible-role-python-pip
