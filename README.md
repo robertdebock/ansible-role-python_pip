@@ -20,7 +20,12 @@ None known.
 Dependencies
 ------------
 
+No dependencies are set explicitly, but you can run these roles to prepare your system to use this role:
+
+- robertdebock.bootstrap
+- robertdebock.buildtools
 - robertdebock.epel
+- robertdebock.scl
 
 Download the dependencies by issuing this command:
 ```
@@ -35,7 +40,11 @@ Example Playbook
 - hosts: all
 
   roles:
-    - robertdebock.python-pip
+    - role: robertdebock.bootstrap
+    - role: robertdebock.buildtools
+    - role: robertdebock.epel
+    - role: robertdebock.scl
+    - role: robertdebock.python-pip
       python_pip_modules:
         - name: ansible
         - version: 2.4.2.0

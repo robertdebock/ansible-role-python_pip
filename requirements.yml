@@ -1,7 +1,5 @@
 ---
-- name: robertdebock.epel
-  src: robertdebock.epel
-- name: robertdebock.scl
-  src: robertdebock.scl
-- name: robertdebock.buildtools
-  src: robertdebock.buildtools
+- robertdebock.bootstrap
+- robertdebock.epel
+- robertdebock.scl
+- robertdebock.buildtools
