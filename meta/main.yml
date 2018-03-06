@@ -43,7 +43,4 @@ galaxy_info:
     - Fedora
     - Ubuntu
 
-dependencies:
-  - robertdebock.epel
-  - robertdebock.scl
-  - robertdebock.buildtools
+dependencies: []
