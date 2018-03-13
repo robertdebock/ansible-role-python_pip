@@ -5,6 +5,10 @@ python-pip
 
 Prepares your system to be able to use the ansible module "pip" by adding Pythons PIP.
 
+Context
+--------
+This role is a part of many compatible roles. Have a look at [the documentation of these roles](https://robertdebock.nl/) for further information.
+
 Requirements
 ------------
 
