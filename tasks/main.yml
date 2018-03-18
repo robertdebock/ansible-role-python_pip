@@ -15,6 +15,11 @@
     state: present
     version: "{{ python_pip_version }}"
 
+- name: update setuptools
+  pip:
+    name: setuptools
+    version: "{{ python_pip_setuptools_version }}"
+
 - name: install requested modules
   pip:
     name: "{{ item.name }}"
