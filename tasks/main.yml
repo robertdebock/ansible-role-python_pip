@@ -12,7 +12,6 @@
 - name: update pip
   pip:
     name: pip
-    state: present
     version: "{{ python_pip_version }}"
 
 - name: update setuptools
