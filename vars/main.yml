@@ -1,7 +1,5 @@
 ---
 # vars file for python-pip
-python_pip_version: 9.0.2
-
 python_pip_packages:
   Alpine:
     - py-pip
