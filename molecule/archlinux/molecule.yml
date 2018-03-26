@@ -8,7 +8,7 @@ driver:
 lint:
   name: yamllint
 platforms:
-  - name: bootstrap-archlinux
+  - name: python-pip-archlinux
     image: base/archlinux
 provisioner:
   name: ansible
