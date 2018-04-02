@@ -49,10 +49,12 @@ This role has been tested against the following distributions and Ansible versio
 |alpine-3.6|yes|yes|yes|
 |alpine-3.7|yes|yes|yes|
 |archlinux|yes|yes|yes|
+|centos-6|no|no|no|
 |centos-7|yes|yes|yes|
 |debian-buster|yes|yes|yes|
 |debian-jessie|yes|yes|yes|
 |debian-stretch|yes|yes|yes|
+|debian-wheezy|no|no|no|
 |fedora-26|yes|yes|yes|
 |fedora-27|yes|yes|yes|
 |opensuse-42.2|yes|yes|yes|
