@@ -13,11 +13,17 @@
   pip:
     name: pip
     version: "{{ python_pip_version }}"
+  register: update_pip
+  until: update_pip is succeeded
+  retries: 3
 
 - name: update setuptools
   pip:
     name: setuptools
     version: "{{ python_pip_setuptools_version }}"
+  register: update_setuptools
+  until: update_setuptools is succeeded
+  retries: 3
 
 - name: install requested modules
   pip:
@@ -25,3 +31,6 @@
     version: "{{ item.version | default(omit) }}"
   with_items:
     - "{{ python_pip_modules }}"
+  register: install_requested_modules
+  until: install_requested_modules is succeeded
+  retries: 3
