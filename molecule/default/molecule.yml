@@ -30,15 +30,10 @@ platforms:
     image: opensuse:42.2
   - name: python-pip-opensuse-42.3
     image: opensuse:42.3
-    # 14.04 LTS
-  - name: python-pip-ubuntu-trusty
-    image: ubuntu:trusty
-    # 16.04 LTS
-  - name: python-pip-ubuntu-xenial
-    image: ubuntu:xenial
-    # 17.04
   - name: python-pip-ubuntu-artful
     image: ubuntu:artful
+  - name: python-pip-ubuntu-bionic
+    image: ubuntu:bionic
 provisioner:
   name: ansible
   lint:
