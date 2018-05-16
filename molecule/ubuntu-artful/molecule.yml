@@ -8,7 +8,6 @@ driver:
 lint:
   name: yamllint
 platforms:
-    # 17.04
   - name: python-pip-ubuntu-artful
     image: ubuntu:artful
 provisioner:
@@ -32,5 +31,3 @@ scenario:
     - destroy
 verifier:
   name: goss
-  lint:
-    name: 'flake8'
