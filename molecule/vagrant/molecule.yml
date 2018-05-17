@@ -34,3 +34,5 @@ scenario:
   name: vagrant
 verifier:
   name: goss
+  lint:
+    name: yamllint
