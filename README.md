@@ -29,10 +29,10 @@ Dependencies
 
 No dependencies are set explicitly, but you can run these roles to prepare your system to use this role:
 
-- robertdebock.bootstrap
-- robertdebock.buildtools
-- robertdebock.epel
-- robertdebock.scl
+- [robertdebock.bootstrap](https://travis-ci.org/robertdebock/ansible-role-bootstrap)
+- [robertdebock.buildtools](https://travis-ci.org/robertdebock/ansible-role-buildtools)
+- [robertdebock.epel](https://travis-ci.org/robertdebock/ansible-role-epel)
+- [robertdebock.scl](https://travis-ci.org/robertdebock/ansible-role-scl)
 
 Download the dependencies by issuing this command:
 ```
