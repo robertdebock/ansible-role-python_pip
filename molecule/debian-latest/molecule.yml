@@ -8,14 +8,14 @@ driver:
 lint:
   name: yamllint
 platforms:
-  - name: python-pip-debian-buster
-    image: debian:buster
+  - name: python-pip-debian-latest
+    image: debian:latest
 provisioner:
   name: ansible
   lint:
     name: ansible-lint
 scenario:
-  name: debian-buster
+  name: debian-latest
 verifier:
   name: goss
   lint:
