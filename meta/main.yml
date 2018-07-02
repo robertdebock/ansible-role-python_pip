@@ -40,10 +40,10 @@ galaxy_info:
     - py-pip
     - system
     - installer
-    - Alpine
-    - Debian
+    - alpine
+    - debian
     - centos
-    - Fedora
-    - Ubuntu
+    - fedora
+    - ubuntu
 
 dependencies: []
