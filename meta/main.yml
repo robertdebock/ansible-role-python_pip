@@ -37,7 +37,7 @@ galaxy_info:
   galaxy_tags:
     - python
     - pip
-    - py-pip
+    - pypip
     - system
     - installer
     - alpine
