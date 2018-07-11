@@ -30,7 +30,6 @@ Dependencies
 No dependencies are set explicitly, but you can run these roles to prepare your system to use this role:
 
 - [robertdebock.bootstrap](https://travis-ci.org/robertdebock/ansible-role-bootstrap)
-- [robertdebock.buildtools](https://travis-ci.org/robertdebock/ansible-role-buildtools)
 - [robertdebock.epel](https://travis-ci.org/robertdebock/ansible-role-epel)
 
 Download the dependencies by issuing this command:
@@ -69,7 +68,6 @@ Example Playbook
 
   roles:
     - role: robertdebock.bootstrap
-    - role: robertdebock.buildtools
     - role: robertdebock.epel
     - role: robertdebock.python-pip
       python_pip_modules:

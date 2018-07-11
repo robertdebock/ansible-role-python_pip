@@ -5,7 +5,6 @@
 
   roles:
     - role: robertdebock.bootstrap
-    - role: robertdebock.buildtools
     - role: robertdebock.epel
     - role: ansible-role-python-pip
       python_pip_modules:
