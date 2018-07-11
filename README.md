@@ -32,7 +32,6 @@ No dependencies are set explicitly, but you can run these roles to prepare your 
 - [robertdebock.bootstrap](https://travis-ci.org/robertdebock/ansible-role-bootstrap)
 - [robertdebock.buildtools](https://travis-ci.org/robertdebock/ansible-role-buildtools)
 - [robertdebock.epel](https://travis-ci.org/robertdebock/ansible-role-epel)
-- [robertdebock.scl](https://travis-ci.org/robertdebock/ansible-role-scl)
 
 Download the dependencies by issuing this command:
 ```
@@ -72,7 +71,6 @@ Example Playbook
     - role: robertdebock.bootstrap
     - role: robertdebock.buildtools
     - role: robertdebock.epel
-    - role: robertdebock.scl
     - role: robertdebock.python-pip
       python_pip_modules:
         - name: ansible

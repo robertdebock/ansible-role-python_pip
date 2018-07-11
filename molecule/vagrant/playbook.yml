@@ -8,7 +8,6 @@
     - role: robertdebock.bootstrap
     - role: robertdebock.buildtools
     - role: robertdebock.epel
-    - role: robertdebock.scl
     - role: ansible-role-python-pip
       python_pip_modules:
         - name: jinja2
