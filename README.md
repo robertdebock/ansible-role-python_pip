@@ -22,7 +22,9 @@ Adding the dependency robertdebock.epel only installs EPEL to Red Hat and CentOS
 Role Variables
 --------------
 
-None known.
+- python_pip_modules: A list of pip modules to install.
+- python_pip_version: The verion of pip to install
+- python_pip_setuptools_version: The version of setuptools to install.
 
 Dependencies
 ------------
