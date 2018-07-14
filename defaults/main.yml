@@ -1,5 +1,5 @@
 ---
-# defaults file for python-pip
+# defaults file for python_pip
 python_pip_modules: []
 
 python_pip_version: 9.0.3
