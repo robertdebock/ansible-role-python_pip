@@ -4,4 +4,4 @@ python_pip_modules: []
 
 python_pip_version: 9.0.3
 
-python_pip_setuptools_version: 39.0.0
+python_pip_setuptools_version: 36.8.0
