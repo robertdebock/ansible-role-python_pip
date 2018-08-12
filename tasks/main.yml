@@ -3,7 +3,6 @@
 - name: install software
   package:
     name: "{{ item }}"
-    state: present
   with_items:
     - "{{ python_pip_packages[ansible_distribution ~ '-' ~ ansible_distribution_major_version]
       | default(python_pip_packages[ansible_distribution]
