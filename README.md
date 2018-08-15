@@ -73,7 +73,7 @@ Example Playbook
     - role: robertdebock.python-pip
       python_pip_modules:
         - name: ansible
-        - version: 2.4.2.0
+          version: 2.4.2.0
 ```
 
 Install this role using `galaxy install robertdebock.python-pip`.
