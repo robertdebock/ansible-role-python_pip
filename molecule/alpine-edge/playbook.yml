@@ -5,6 +5,8 @@
 
   roles:
     - role: robertdebock.bootstrap
+    - role: robertdebock.buildtools
     - role: ansible-role-python-pip
       python_pip_modules:
         - name: jinja2
+        - name: ansible
