@@ -1,0 +1,11 @@
+---
+- name: Converge false-modules
+  hosts: all
+  gather_facts: false
+
+  roles:
+    - role: robertdebock.bootstrap
+    - role: ansible-role-python-pip
+      python_pip_modules:
+        - name: jinja2
+        - name: ansible
