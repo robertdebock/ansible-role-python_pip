@@ -1,3 +1,0 @@
----
-- name: ldconfig
-  command: ldconfig

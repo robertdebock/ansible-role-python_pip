@@ -25,7 +25,7 @@
     - ansible_distribution == "CentOS"
     - ansible_distribution_major_version == "6"
   notify:
-    - ldconfig
+    - run ldconfig
 
 - name: link binaries in path
   file:
