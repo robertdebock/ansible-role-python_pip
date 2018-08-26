@@ -4,5 +4,8 @@ python_pip_packages:
   Alpine:
     - py-pip
     - python2-dev
+  CentOS-6:
+    - python27-python-pip
+    - python27
   default:
     - python-pip

@@ -2,6 +2,6 @@
 # defaults file for python_pip
 python_pip_modules: []
 
-python_pip_version: 9.0.3
+python_pip_version: 18.0
 
 python_pip_setuptools_version: 36.8.0
