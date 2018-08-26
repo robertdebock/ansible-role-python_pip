@@ -13,6 +13,7 @@
     path: /etc/profile.d/python27-path.sh
     line: "PATH=$PATH:/opt/rh/python27/root/usr/bin"
     regexp: "^PATH"
+    create: yes
   when:
     - ansible_distribution == "CentOS"
     - ansible_distribution_major_version == "6"
