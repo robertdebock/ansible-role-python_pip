@@ -8,6 +8,15 @@
       | default(python_pip_packages[ansible_distribution]
       | default(python_pip_packages['default'] )) }}"
 
+- name: update path
+  lineinfile:
+    path: /etc/profile.d/python27-path.sh
+    line: "PATH=$PATH:/opt/rh/python27/root/usr/bin"
+    regexp: "^PATH"
+  when:
+    - ansible_distribution == "CentOS"
+    - ansible_ditribution_major_version == "6"
+
 - name: update pip
   pip:
     name: pip
