@@ -8,15 +8,32 @@
       | default(python_pip_packages[ansible_distribution]
       | default(python_pip_packages['default'] )) }}"
 
-- name: update path
-  lineinfile:
-    path: /etc/profile.d/python27-path.sh
-    line: "PATH=$PATH:/opt/rh/python27/root/usr/bin"
-    regexp: "^PATH"
-    create: yes
+- name: configure system to load python27 variables
+  copy:
+    src: /opt/rh/python27/enable
+    dest: /etc/profile.d/python27.sh
+    remote_src: yes
   when:
     - ansible_distribution == "CentOS"
     - ansible_distribution_major_version == "6"
+
+- name: configure dynamic linker to use python27
+  copy:
+    dest: /etc/ld.so.conf.d/python27-x86_64.conf
+    content: "/opt/rh/python27/root/usr/lib64"
+  notify:
+    - ldconfig
+
+- name: link binaries in path
+  file:
+    src: /opt/rh/python27/root/usr/bin/{{ item }}
+    dest: /usr/bin/{{ item }}
+    state: link
+  with_items:
+    - pip
+
+- name: flush handlers
+  meta: flush_handlers
 
 - name: update pip
   pip:
