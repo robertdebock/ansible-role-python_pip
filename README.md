@@ -31,12 +31,13 @@ Dependencies
 
 No dependencies are set explicitly, but you can run these roles to prepare your system to use this role:
 
-- [robertdebock.bootstrap](https://travis-ci.org/robertdebock/ansible-role-bootstrap)
-- [robertdebock.buildtools](https://travis-ci.org/robertdebock/ansible-role-buildtools) (For Alpine.)
-- [robertdebock.scl](https://travis-ci.org/robertdebock/ansible-role-scl) (For CentOS 6.)
-- [robertdebock.epel](https://travis-ci.org/robertdebock/ansible-role-epel) (For CentOS 7.)
+- [robertdebock.bootstrap](https://galaxy.ansible.com/robertdebock/bootstrap)
+- [robertdebock.buildtools](https://galaxy.ansible.com/robertdebock/buildtools) (For Alpine.)
+- [robertdebock.epel](https://galaxy.ansible.com/robertdebock/epel) (For CentOS 7.)
+- [robertdebock.scl](https://galaxy.ansible.com/robertdebock/scl) (For CentOS 6.)
 
 Download the dependencies by issuing this command:
+
 ```
 ansible-galaxy install --role-file requirements.yml
 ```
@@ -51,7 +52,7 @@ This role has been tested against the following distributions and Ansible versio
 |alpine-edge|yes|yes|yes|
 |alpine-latest|yes|yes|yes|
 |archlinux|yes|yes|yes|
-|centos-6|no|no|no|
+|centos-6|yes|yes|yes|
 |centos-latest|yes|yes|yes|
 |debian-latest|yes|yes|yes|
 |debian-stable|yes|yes|yes|
@@ -67,7 +68,8 @@ Example Playbook
 
 ```
 ---
-- hosts: all
+- name: install ansible using pip for CentOS 7
+  hosts: all
 
   roles:
     - role: robertdebock.bootstrap
@@ -75,7 +77,32 @@ Example Playbook
     - role: robertdebock.python-pip
       python_pip_modules:
         - name: ansible
-          version: 2.4.2.0
+```
+
+```
+---
+- name: install ansible using pip for CentOS 6
+  hosts: all
+
+  roles:
+    - role: robertdebock.bootstrap
+    - role: robertdebock.scl
+    - role: robertdebock.python-pip
+      python_pip_modules:
+        - name: ansible
+```
+
+```
+---
+- name: install ansible using pip for Alpine
+  hosts: all
+
+  roles:
+    - role: robertdebock.bootstrap
+    - role: robertdebock.buildtools
+    - role: robertdebock.python-pip
+      python_pip_modules:
+        - ansible
 ```
 
 Install this role using `galaxy install robertdebock.python-pip`.
