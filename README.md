@@ -32,7 +32,9 @@ Dependencies
 No dependencies are set explicitly, but you can run these roles to prepare your system to use this role:
 
 - [robertdebock.bootstrap](https://travis-ci.org/robertdebock/ansible-role-bootstrap)
-- [robertdebock.epel](https://travis-ci.org/robertdebock/ansible-role-epel)
+- [robertdebock.buildtools](https://travis-ci.org/robertdebock/ansible-role-buildtools) (For Alpine.)
+- [robertdebock.scl](https://travis-ci.org/robertdebock/ansible-role-scl) (For CentOS 6.)
+- [robertdebock.epel](https://travis-ci.org/robertdebock/ansible-role-epel) (For CentOS 7.)
 
 Download the dependencies by issuing this command:
 ```
