@@ -16,7 +16,7 @@ galaxy_info:
         - all
     - name: CentOS
       version:
-        - all
+        - 7
     - name: Debian
       versions:
         - all

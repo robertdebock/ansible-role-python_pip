@@ -1,5 +1,0 @@
----
-# vars file for python_pip
-python_pip_packages:
-  - python27-python-pip
-  - python27

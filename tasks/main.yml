@@ -7,7 +7,6 @@
 - name: load os-specific variables
   include_vars: "{{ item }}"
   with_first_found:
-    - "{{ ansible_distribution }}-{{ ansible_distribution_major_version }}.yml"
     - "{{ ansible_distribution }}.yml"
     - default.yml
 
@@ -16,39 +15,6 @@
     name: "{{ item }}"
   with_items:
     - "{{ python_pip_packages }}"
-
-- name: configure system to load python27 variables
-  copy:
-    src: /opt/rh/python27/enable
-    dest: /etc/profile.d/python27.sh
-    remote_src: yes
-  when:
-    - ansible_distribution == "CentOS"
-    - ansible_distribution_major_version == "6"
-
-- name: configure dynamic linker to use python27
-  copy:
-    dest: /etc/ld.so.conf.d/python27-x86_64.conf
-    content: "/opt/rh/python27/root/usr/lib64"
-  when:
-    - ansible_distribution == "CentOS"
-    - ansible_distribution_major_version == "6"
-  notify:
-    - run ldconfig
-
-- name: link binaries in path
-  file:
-    src: /opt/rh/python27/root/usr/bin/{{ item }}
-    dest: /usr/bin/{{ item }}
-    state: link
-  when:
-    - ansible_distribution == "CentOS"
-    - ansible_distribution_major_version == "6"
-  with_items:
-    - pip
-
-- name: flush handlers
-  meta: flush_handlers
 
 - name: update pip
   pip:

@@ -1,4 +1,0 @@
----
-# handler file for python_pip
-- name: run ldconfig
-  command: ldconfig
