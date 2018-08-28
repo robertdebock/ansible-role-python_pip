@@ -34,7 +34,6 @@ No dependencies are set explicitly, but you can run these roles to prepare your 
 - [robertdebock.bootstrap](https://galaxy.ansible.com/robertdebock/bootstrap)
 - [robertdebock.buildtools](https://galaxy.ansible.com/robertdebock/buildtools) (For Alpine.)
 - [robertdebock.epel](https://galaxy.ansible.com/robertdebock/epel) (For CentOS 7.)
-- [robertdebock.scl](https://galaxy.ansible.com/robertdebock/scl) (For CentOS 6.)
 
 Download the dependencies by issuing this command:
 
@@ -74,19 +73,6 @@ Example Playbook
   roles:
     - role: robertdebock.bootstrap
     - role: robertdebock.epel
-    - role: robertdebock.python-pip
-      python_pip_modules:
-        - name: ansible
-```
-
-```
----
-- name: install ansible using pip for CentOS 6
-  hosts: all
-
-  roles:
-    - role: robertdebock.bootstrap
-    - role: robertdebock.scl
     - role: robertdebock.python-pip
       python_pip_modules:
         - name: ansible
