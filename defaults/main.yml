@@ -1,7 +1,3 @@
 ---
 # defaults file for python_pip
 python_pip_modules: []
-
-python_pip_version: latest
-
-python_pip_setuptools_version: latest
