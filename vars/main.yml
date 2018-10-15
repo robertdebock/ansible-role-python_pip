@@ -1,0 +1,8 @@
+---
+# vars file for python_pip
+python_pip_packages:
+  default:
+    - python-pip
+  Alpine:
+    - py-pip
+    - python2-dev

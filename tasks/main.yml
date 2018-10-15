@@ -1,21 +1,10 @@
 ---
 # tasks file for python_pip
-- name: load default variables
-  include_vars:
-    file: default.yml
-
-- name: load os-specific variables
-  include_vars: "{{ item }}"
-  with_first_found:
-    - "{{ ansible_distribution }}.yml"
-    - default.yml
-
-- name: install software
+- name: install python pip
   package:
-    name: "{{ item }}"
-    state: present
-  with_items:
-    - "{{ python_pip_packages }}"
+    name: "{{ python_pip_packages[ansible_distribution]
+          | default(python_pip_packages['default']) }}"
+    state: "{{ python_pip_package_state }}"
 
 - name: update pip
   pip:

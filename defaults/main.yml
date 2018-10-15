@@ -1,3 +1,6 @@
 ---
 # defaults file for python_pip
 python_pip_modules: []
+
+# To update all packages installed by this roles, set `python-pip_package_state` to `latest`.
+python-pip_package_state: present
