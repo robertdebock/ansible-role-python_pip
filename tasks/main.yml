@@ -4,6 +4,8 @@
   package:
     name: "{{ python_pip_conflicting_packages }}"
     state: absent
+  when:
+    - ansible_distribution != "Archlinux"
 
 - name: install python pip
   package:
