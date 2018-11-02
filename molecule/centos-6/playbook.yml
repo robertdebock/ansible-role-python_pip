@@ -3,9 +3,12 @@
   hosts: all
   gather_facts: false
 
+  vars:
+    python_pip_modules:
+      - name: ansible
+      - name: jinja
+
   roles:
-    - role: robertdebock.bootstrap
-    - role: ansible-role-python-pip
-      python_pip_modules:
-        - name: jinja2
-        - name: ansible
+    - robertdebock.bootstrap
+    - robertdebock.scl
+    - ansible-role-python-pip

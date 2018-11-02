@@ -5,52 +5,66 @@ python-pip
 
 Prepares your system to be able to use the ansible module "pip" by adding Pythons PIP.
 
-[Unit tests](https://travis-ci.org/robertdebock/ansible-role-python-pip) are done on every commit and periodically.
 
-If you find issues, please register them in [GitHub](https://github.com/robertdebock/ansible-role-python-pip/issues)
+Example Playbook
+----------------
 
-To test this role locally please use [Molecule](https://github.com/metacloud/molecule):
+This example is taken from `molecule/default/playbook.yml`:
 ```
-pip install molecule
-molecule test
+---
+- name: Converge false-modules
+  hosts: all
+  gather_facts: false
+
+  roles:
+    - robertdebock.bootstrap
+    - robertdebock.epel
+    - robertdebock.python-pip
+      python_pip_modules:
+        - name: jinja2
+        - name: ansible
+
 ```
-There are many scenarios available, please have a look in the `molecule/` directory.
+
+Role Variables
+--------------
+
+These variables are set in `defaults/main.yml`:
+```
+---
+# defaults file for python_pip
+
+# By default no modules should be installed.
+python_pip_modules: []
+
+# To update all packages installed by this roles, set `python-pip_package_state` to `latest`.
+python_pip_package_state: present
+
+```
+
+Requirements
+------------
+
+- Access to a repository containing packages, likely on the internet.
+- A recent version of Ansible. (Tests run on the last 3 release of Ansible.)
+
+The following roles can be installed to ensure all requirements are met, using `ansible-galaxy install -r requirements.yml`:
+
+---
+- robertdebock.bootstrap
+- robertdebock.buildtools
+- robertdebock.epel
+- robertdebock.scl
+
 
 Context
---------
+-------
+
 This role is a part of many compatible roles. Have a look at [the documentation of these roles](https://robertdebock.nl/) for further information.
 
 Here is an overview of related roles:
 ![dependencies](https://raw.githubusercontent.com/robertdebock/drawings/artifacts/python-pip.png "Dependency")
 
-Requirements
-------------
-
-For Red Hat or CentOS systems this role required the EPEL repository to be available on RHEL/CentOS. robertdebock.epel can be used for that.
-Other systems typically have the required packages in their repositories.
-Adding the dependency robertdebock.epel only installs EPEL to Red Hat and CentOS systems, others will be skipped.
-
-Role Variables
---------------
-
-- python_pip_modules: A list of pip modules to install.
-- python_pip_version: The verion of pip to install
-- python_pip_setuptools_version: The version of setuptools to install.
-
-Dependencies
-------------
-
-No dependencies are set explicitly, but you can run these roles to prepare your system to use this role:
-
-- [robertdebock.bootstrap](https://galaxy.ansible.com/robertdebock/bootstrap)
-- [robertdebock.buildtools](https://galaxy.ansible.com/robertdebock/buildtools) (For Alpine.)
-- [robertdebock.epel](https://galaxy.ansible.com/robertdebock/epel) (For CentOS 7.)
-
-Download the dependencies by issuing this command:
-
-```
-ansible-galaxy install --role-file requirements.yml
-```
 
 Compatibility
 -------------
@@ -77,41 +91,26 @@ This role has been tested against the following distributions and Ansible versio
 
 A single star means the build may fail, it's marked as an experimental build.
 
-Example Playbook
-----------------
+Testing
+-------
 
+[Unit tests](https://travis-ci.org/robertdebock/ansible-role-python-pip) are done on every commit and periodically.
+
+If you find issues, please register them in [GitHub](https://github.com/robertdebock/ansible-role-python-pip/issues)
+
+To test this role locally please use [Molecule](https://github.com/metacloud/molecule):
 ```
----
-- name: install ansible using pip for CentOS 7
-  hosts: all
-
-  roles:
-    - role: robertdebock.bootstrap
-    - role: robertdebock.epel
-    - role: robertdebock.python-pip
-      python_pip_modules:
-        - name: ansible
+pip install molecule
+molecule test
 ```
+There are many specific scenarios available, please have a look in the `molecule/` directory.
 
-```
----
-- name: install ansible using pip for Alpine
-  hosts: all
-
-  roles:
-    - role: robertdebock.bootstrap
-    - role: robertdebock.buildtools
-    - role: robertdebock.python-pip
-      python_pip_modules:
-        - ansible
-```
-
-Install this role using `galaxy install robertdebock.python-pip`.
 
 License
 -------
 
-Apache License, Version 2.0
+Apache-2.0
+
 
 Author Information
 ------------------
