@@ -3,8 +3,7 @@ python-pip
 
 [![Build Status](https://travis-ci.org/robertdebock/ansible-role-python-pip.svg?branch=master)](https://travis-ci.org/robertdebock/ansible-role-python-pip)
 
-Prepares your system to be able to use the ansible module "pip" by adding Pythons PIP.
-
+The purpose of this role is to install pythons pip on your system.
 
 Example Playbook
 ----------------
@@ -16,13 +15,15 @@ This example is taken from `molecule/default/playbook.yml`:
   hosts: all
   gather_facts: false
 
+  vars:
+    python_pip_modules:
+      - name: jinja2
+      - name: ansible
+
   roles:
     - robertdebock.bootstrap
     - robertdebock.epel
     - robertdebock.python-pip
-      python_pip_modules:
-        - name: jinja2
-        - name: ansible
 
 ```
 

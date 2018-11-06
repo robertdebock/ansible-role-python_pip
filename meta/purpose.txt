@@ -1,1 +1,0 @@
-Prepares your system to be able to use the ansible module "pip" by adding Pythons PIP.

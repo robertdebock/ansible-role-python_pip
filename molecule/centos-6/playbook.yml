@@ -1,14 +1,15 @@
 ---
-- name: Converge false-modules
+- name: Converge
   hosts: all
-  gather_facts: false
+  gather_facts: no
+  become: yes
 
   vars:
     python_pip_modules:
+      - name: jinja2
       - name: ansible
-      - name: jinja
 
   roles:
     - robertdebock.bootstrap
-    - robertdebock.scl
+    - robertdebock.epel
     - ansible-role-python-pip
