@@ -16,7 +16,7 @@
   pip:
     name: pip
     state: present
-    version: 18.0
+    version: "{{ python_pip_version }}"
   register: update_pip
   until: update_pip is succeeded
   retries: 3
