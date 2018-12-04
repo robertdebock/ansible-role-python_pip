@@ -11,6 +11,9 @@
   package:
     name: "{{ python_pip_packages }}"
     state: "{{ python_pip_package_state }}"
+  register: python_pip_install_python_pip
+  until: python_pip_install_python_pip
+  retries: 3
 
 - name: update pip
   pip:
