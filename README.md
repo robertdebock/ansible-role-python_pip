@@ -40,7 +40,7 @@ These variables are set in `defaults/main.yml`:
 # defaults file for python_pip
 
 # The version of pip to update to.
-python_pip_version: 18.1
+python_pip_version: 19.0.1
 
 # By default no modules should be installed.
 python_pip_modules: []
