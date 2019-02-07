@@ -1,12 +1,5 @@
 ---
 # tasks file for python_pip
-- name: remove conflicting packages
-  package:
-    name: "{{ python_pip_conflicting_packages }}"
-    state: absent
-  when:
-    - ansible_distribution != "Archlinux"
-
 - name: install python pip
   package:
     name: "{{ python_pip_packages }}"

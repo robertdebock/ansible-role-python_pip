@@ -15,6 +15,7 @@ This example is taken from `molecule/default/playbook.yml`:
   hosts: all
   gather_facts: no
   become: yes
+  serial: 30%
 
   vars:
     python_pip_modules:
