@@ -1,7 +1,7 @@
-python-pip
+python_pip
 =========
 
-[![Build Status](https://travis-ci.org/robertdebock/ansible-role-python-pip.svg?branch=master)](https://travis-ci.org/robertdebock/ansible-role-python-pip)
+[![Build Status](https://travis-ci.org/robertdebock/ansible-role-python_pip.svg?branch=master)](https://travis-ci.org/robertdebock/ansible-role-python_pip)
 
 Install pythons pip on your system.
 
@@ -26,7 +26,7 @@ This example is taken from `molecule/default/playbook.yml`:
     - robertdebock.bootstrap
     - robertdebock.epel
     - robertdebock.buildtools
-    - robertdebock.python-pip
+    - robertdebock.python_pip
 
 ```
 
@@ -74,7 +74,7 @@ Context
 This role is a part of many compatible roles. Have a look at [the documentation of these roles](https://robertdebock.nl/) for further information.
 
 Here is an overview of related roles:
-![dependencies](https://raw.githubusercontent.com/robertdebock/drawings/artifacts/python-pip.png "Dependency")
+![dependencies](https://raw.githubusercontent.com/robertdebock/drawings/artifacts/python_pip.png "Dependency")
 
 
 Compatibility
@@ -105,9 +105,9 @@ A single star means the build may fail, it's marked as an experimental build.
 Testing
 -------
 
-[Unit tests](https://travis-ci.org/robertdebock/ansible-role-python-pip) are done on every commit and periodically.
+[Unit tests](https://travis-ci.org/robertdebock/ansible-role-python_pip) are done on every commit and periodically.
 
-If you find issues, please register them in [GitHub](https://github.com/robertdebock/ansible-role-python-pip/issues)
+If you find issues, please register them in [GitHub](https://github.com/robertdebock/ansible-role-python_pip/issues)
 
 To test this role locally please use [Molecule](https://github.com/metacloud/molecule):
 ```
