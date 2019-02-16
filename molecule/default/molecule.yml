@@ -34,8 +34,10 @@ platforms:
     image: opensuse:leap
   - name: python-pip-opensuse-tumbleweed
     image: opensuse:tumbleweed
-  - name: python-pip-ubuntu-artful
-    image: ubuntu:artful
+  - name: python-pip-ubuntu-latest
+    image: ubuntu:latest
+  - name: python_pip-ubuntu-rolling
+    image: ubuntu:rolling
   - name: python-pip-ubuntu-devel
     image: ubuntu:devel
   - name: python-pip-ubuntu-latest
