@@ -32,8 +32,6 @@ platforms:
     image: fedora:rawhide
   - name: python-pip-opensuse-leap
     image: opensuse:leap
-  - name: python-pip-opensuse-tumbleweed
-    image: opensuse:tumbleweed
   - name: python-pip-ubuntu-latest
     image: ubuntu:latest
   - name: python_pip-ubuntu-rolling

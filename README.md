@@ -41,7 +41,7 @@ These variables are set in `defaults/main.yml`:
 # defaults file for python_pip
 
 # The version of pip to update to.
-python_pip_version: 19.0.1
+python_pip_version: 19.0.3
 
 # By default no modules should be installed.
 python_pip_modules: []
@@ -95,7 +95,6 @@ This role has been tested against the following distributions and Ansible versio
 |fedora-latest|yes|yes|yes*|
 |fedora-rawhide*|yes|yes|yes*|
 |opensuse-leap|yes|yes|yes*|
-|opensuse-tumbleweed|yes|yes|yes*|
 |ubuntu-devel*|yes|yes|yes*|
 |ubuntu-latest|yes|yes|yes*|
 |ubuntu-rolling|yes|yes|yes*|
