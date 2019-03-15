@@ -3,53 +3,46 @@ dependency:
   name: galaxy
   options:
     role-file: requirements.yml
-driver:
-  name: docker
 lint:
   name: yamllint
+driver:
+  name: docker
 platforms:
-  - name: python-pip-alpine-edge
+  - name: python_pip-alpine-edge
     image: alpine:edge
     command: sh -c "while true ; do sleep 1 ; done"
-  - name: python-pip-alpine-latest
+  - name: python_pip-alpine-latest
     image: alpine:latest
     command: sh -c "while true ; do sleep 1 ; done"
-  - name: python-pip-archlinux
+  - name: python_pip-archlinux
     image: archlinux/base
-  - name: python-pip-centos-6
+  - name: python_pip-centos-6
     image: centos:6
-  - name: python-pip-centos-latest
+  - name: python_pip-centos-latest
     image: centos:latest
-  - name: python-pip-debian-latest
+  - name: python_pip-debian-latest
     image: debian:latest
-  - name: python-pip-debian-stable
+  - name: python_pip-debian-stable
     image: debian:stable
-  - name: python-pip-debian-unstable
+  - name: python_pip-debian-unstable
     image: debian:unstable
-  - name: python-pip-fedora-latest
+  - name: python_pip-fedora-latest
     image: fedora:latest
-  - name: python-pip-fedora-rawhide
+  - name: python_pip-fedora-rawhide
     image: fedora:rawhide
-  - name: python-pip-opensuse-leap
+  - name: python_pip-opensuse-leap
     image: opensuse:leap
-  - name: python-pip-ubuntu-latest
+  - name: python_pip-ubuntu-latest
     image: ubuntu:latest
   - name: python_pip-ubuntu-rolling
     image: ubuntu:rolling
-  - name: python-pip-ubuntu-devel
+  - name: python_pip-ubuntu-devel
     image: ubuntu:devel
-  - name: python-pip-ubuntu-latest
+  - name: python_pip-ubuntu-latest
     image: ubuntu:latest
 provisioner:
   name: ansible
-  inventory:
-    host_vars:
-      python-fedora-rawhide:
-        ansible_python_interpreter: /usr/bin/python3
   lint:
     name: ansible-lint
-  config_options:
-    defaults:
-      callback_plugins: /usr/lib/python2.7/site-packages/ara/plugins/callbacks
 scenario:
   name: default

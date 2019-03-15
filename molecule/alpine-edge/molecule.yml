@@ -3,12 +3,12 @@ dependency:
   name: galaxy
   options:
     role-file: requirements.yml
-driver:
-  name: docker
 lint:
   name: yamllint
+driver:
+  name: docker
 platforms:
-  - name: python-pip-alpine-edge
+  - name: python_pip-alpine-edge
     image: alpine:edge
     command: sh -c "while true ; do sleep 1 ; done"
 provisioner:

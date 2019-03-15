@@ -27,7 +27,6 @@ This example is taken from `molecule/default/playbook.yml`:
     - robertdebock.epel
     - robertdebock.buildtools
     - robertdebock.python_pip
-
 ```
 
 Also see a [full explanation and example](https://robertdebock.nl/how-to-use-these-roles.html) on how to use these roles.
@@ -45,10 +44,6 @@ python_pip_version: 19.0.3
 
 # By default no modules should be installed.
 python_pip_modules: []
-
-# To update all packages installed by this roles, set `python-pip_package_state` to `latest`.
-python_pip_package_state: present
-
 ```
 
 Requirements
