@@ -5,7 +5,7 @@
     name: "{{ python_pip_packages }}"
     state: present
   register: python_pip_install_python_pip
-  until: python_pip_install_python_pip
+  until: python_pip_install_python_pip is succeeded
   retries: 3
 
 - name: update pip
