@@ -16,6 +16,11 @@ This example is taken from `molecule/default/playbook.yml`:
   become: yes
   gather_facts: yes
 
+  vars:
+    python_pip_modules:
+      - name: jinja2
+      - name: ansible
+
   roles:
     - robertdebock.python_pip
 ```
@@ -28,11 +33,6 @@ The machine you are running this on, may need to be prepared. Tests have been do
   gather_facts: no
   become: yes
   serial: 30%
-
-  vars:
-    python_pip_modules:
-      - name: jinja2
-      - name: ansible
 
   roles:
     - robertdebock.bootstrap
