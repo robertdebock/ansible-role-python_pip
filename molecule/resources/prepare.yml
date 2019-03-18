@@ -1,5 +1,5 @@
 ---
-- name: Converge
+- name: Prepare
   hosts: all
   gather_facts: no
   become: yes
@@ -14,4 +14,3 @@
     - robertdebock.bootstrap
     - robertdebock.epel
     - robertdebock.buildtools
-    - ansible-role-python_pip
