@@ -110,6 +110,11 @@ This role has been tested against the following distributions and Ansible versio
 
 A single star means the build may fail, it's marked as an experimental build.
 
+Upstream version(s)
+-------------------
+
+This role [point to a version](https://github.com/robertdebock/ansible-role-python_pip/blob/master/defaults/main.yml) of [pip](https://pypi.org/project/pip/).
+
 Testing
 -------
 
