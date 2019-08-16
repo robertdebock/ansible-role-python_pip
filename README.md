@@ -110,10 +110,13 @@ This role has been tested against the following distributions and Ansible versio
 
 A single star means the build may fail, it's marked as an experimental build.
 
-Upstream version(s)
+Included version(s)
 -------------------
 
-This role [point to a version](https://github.com/robertdebock/ansible-role-python_pip/blob/master/defaults/main.yml) of [pip](https://pypi.org/project/pip/).
+This role [refers to a version](https://github.com/robertdebock/ansible-role-python_pip/blob/master/defaults/main.yml) released by PyPi. Check the released version(s) here:
+- [pip](https://pypi.org/project/pip/).
+
+This version reference means a role may get outdated. Monthly tests occur to see if [bit-rot](https://en.wikipedia.org/wiki/Software_rot) occured. If you however find a problem, please create an issue, I'll get on it as soon as possible.
 
 Testing
 -------
