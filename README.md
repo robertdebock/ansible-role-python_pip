@@ -115,6 +115,7 @@ Included version(s)
 
 This role [refers to a version](https://github.com/robertdebock/ansible-role-python_pip/blob/master/defaults/main.yml) released by PyPi. Check the released version(s) here:
 - [pip](https://pypi.org/project/pip/).
+- [setuptools](https://pypi.org/project/setuptools/).
 
 This version reference means a role may get outdated. Monthly tests occur to see if [bit-rot](https://en.wikipedia.org/wiki/Software_rot) occured. If you however find a problem, please create an issue, I'll get on it as soon as possible.
 
