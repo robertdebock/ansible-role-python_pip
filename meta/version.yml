@@ -4,3 +4,5 @@ reference: "https://github.com/robertdebock/ansible-role-python_pip/blob/master/
 versions:
   - name: pip
     url: "https://pypi.org/project/pip/"
+  - name: setuptools
+    url: "https://pypi.org/project/setuptools/"

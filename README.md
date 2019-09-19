@@ -33,7 +33,6 @@ The machine you are running this on, may need to be prepared.
   hosts: all
   gather_facts: no
   become: yes
-  serial: 30%
 
   roles:
     - robertdebock.bootstrap
@@ -52,13 +51,16 @@ These variables are set in `defaults/main.yml`:
 # defaults file for python_pip
 
 # The version of pip to update to.
-python_pip_version: 19.2.1
+python_pip_version: 19.2.3
 
 # The version of setuptools to update to.
-python_pip_setuptools_version: 41.0.1
+python_pip_setuptools_version: 41.2.0
 
 # By default no modules should be installed.
 python_pip_modules: []
+
+# Connect to a (pypi) proxy by setting this variable.
+# python_pip_proxy: "https://user:password@proxy:8443/artifactory/pypi/pypi-virtual/simple"
 ```
 
 Requirements
@@ -118,12 +120,14 @@ Some variarations of the build matrix do not work. These are the variations and 
 | variation                 | reason                 |
 |---------------------------|------------------------|
 | CentOS 6 | SyntaxError: invalid syntax |
+=======
 
 Included version(s)
 -------------------
 
 This role [refers to a version](https://github.com/robertdebock/ansible-role-python_pip/blob/master/defaults/main.yml) released by PyPi. Check the released version(s) here:
 - [pip](https://pypi.org/project/pip/).
+- [setuptools](https://pypi.org/project/setuptools/).
 
 This version reference means a role may get outdated. Monthly tests occur to see if [bit-rot](https://en.wikipedia.org/wiki/Software_rot) occured. If you however find a problem, please create an issue, I'll get on it as soon as possible.
 
