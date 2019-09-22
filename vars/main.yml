@@ -7,10 +7,6 @@ _python_pip_packages:
     - py-pip
     - python2-dev
   Ubuntu:
-<<<<<<< HEAD
     - python3-pip
-=======
-    - python-pip
->>>>>>> f6dab44b0294b325f46e6ade26bb0d7a6dad4242
 
 python_pip_packages: "{{ _python_pip_packages[ansible_distribution] | default(_python_pip_packages['default']) }}"
