@@ -17,7 +17,6 @@
   until: update_setuptools is succeeded
   retries: 3
 
-
 - name: update pip
   pip:
     name: pip
