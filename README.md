@@ -80,6 +80,14 @@ The following roles can be installed to ensure all requirements are met, using `
 
 ```
 
+This role uses the following modules:
+```yaml
+---
+- ini_file
+- package
+- pip
+```
+
 Context
 -------
 
@@ -120,7 +128,6 @@ Some variarations of the build matrix do not work. These are the variations and 
 | variation                 | reason                 |
 |---------------------------|------------------------|
 | CentOS 6 | SyntaxError: invalid syntax |
-=======
 
 Included version(s)
 -------------------
