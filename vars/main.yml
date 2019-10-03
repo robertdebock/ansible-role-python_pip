@@ -1,13 +1,19 @@
 ---
 # vars file for python_pip
 _python_pip_packages:
-  default:
-    - python-pip
-    - python-setuptools
   Alpine:
     - py-pip
-    - python2-dev
+    - python3-dev
+  Archlinux:
+    - python-pip
+    - python-setuptools
   Debian:
+    - python3-pip
+    - python3-setuptools
+  RedHat:
+    - python3-pip
+    - python3-setuptools
+  Suse:
     - python3-pip
     - python3-setuptools
 
