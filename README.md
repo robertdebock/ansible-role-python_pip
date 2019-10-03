@@ -6,6 +6,9 @@ python_pip
 
 Install pythons pip on your system.
 
+<img src="https://img.shields.io/ansible/role/d/42440"/>
+<img src="https://img.shields.io/ansible/quality/42440"/>
+
 Example Playbook
 ----------------
 
@@ -107,7 +110,7 @@ This role has been tested against the following distributions and Ansible versio
 |alpine-edge*|yes|yes|yes*|
 |alpine-latest|yes|yes|yes*|
 |archlinux|yes|yes|yes*|
-|centos-6|no|no|no*|
+|centos-7|no|no|no*|
 |centos-latest|yes|yes|yes*|
 |debian-stable|yes|yes|yes*|
 |debian-unstable*|yes|yes|yes*|
