@@ -52,13 +52,6 @@ These variables are set in `defaults/main.yml`:
 ```yaml
 ---
 # defaults file for python_pip
-
-# The version of pip to update to.
-python_pip_version: 19.2.3
-
-# The version of setuptools to update to.
-python_pip_setuptools_version: 41.2.0
-
 # By default no modules should be installed.
 python_pip_modules: []
 
@@ -79,7 +72,6 @@ The following roles can be installed to ensure all requirements are met, using `
 - robertdebock.bootstrap
 - robertdebock.buildtools
 - robertdebock.epel
-- robertdebock.scl
 
 ```
 
