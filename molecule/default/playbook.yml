@@ -4,10 +4,5 @@
   become: yes
   gather_facts: yes
 
-  vars:
-    python_pip_modules:
-      - name: jinja2
-      - name: ansible
-
   roles:
     - ansible-role-python_pip
