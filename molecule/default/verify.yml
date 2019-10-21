@@ -1,0 +1,12 @@
+---
+- name: Verify
+  hosts: all
+  become: yes
+  gather_facts: yes
+
+  roles:
+    - role: ansible-role-python_pip
+      python_pip_modules:
+        - name: jinja2
+        - name: ansible
+          version: 2.8.5
