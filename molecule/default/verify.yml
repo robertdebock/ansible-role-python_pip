@@ -9,4 +9,3 @@
       python_pip_modules:
         - name: jinja2
         - name: ansible
-          version: 2.8.5

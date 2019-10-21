@@ -3,8 +3,8 @@
 _python_pip_packages:
   Alpine:
     - py-pip
-    - py3-setuptools
-    - python3-dev
+    - py-setuptools
+    - python2-dev
   Archlinux:
     - python-pip
     - python-setuptools
