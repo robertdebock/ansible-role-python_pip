@@ -9,15 +9,13 @@ driver:
   name: docker
 platforms:
   - name: "${image:-default}-${TOX_ENVNAME:-default}"
-    image: "robertdebock/${image:-docker-fedora-systemd}:${tag:-latest}"
+    image: "${namespace}${image:-docker-fedora-systemd}:${tag:-latest}"
     command: sh -c "while true ; do sleep 30 ; done"
     pre_build_image: yes
 provisioner:
   name: ansible
-verifier:
-  name: ansible
-  lint:
-    name: ansible-lint
-    enabled: false
+  playbooks:
+    prepare: prepare.yml
+    converge: playbook.yml
 scenario:
   name: default
