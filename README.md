@@ -6,8 +6,8 @@ python_pip
 
 Install pythons pip on your system.
 
-<img src="https://img.shields.io/ansible/role/d/42440"/>
-<img src="https://img.shields.io/ansible/quality/42440"/>
+<img src="https://img.shields.io/ansible/role/d/"/>
+<img src="https://img.shields.io/ansible/quality/"/>
 
 Example Playbook
 ----------------
