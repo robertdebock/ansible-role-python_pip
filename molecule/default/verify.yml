@@ -4,8 +4,7 @@
   become: yes
   gather_facts: yes
 
-  roles:
-    - role: ansible-role-python_pip
-      python_pip_modules:
-        - name: jinja2
-        - name: ansible
+  tasks:
+    - name: install pip module
+      pip:
+        name: ansible
