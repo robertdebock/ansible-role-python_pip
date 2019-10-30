@@ -1,4 +1,0 @@
----
-exceptions:
-  - variation: CentOS 6
-    reason: "SyntaxError: invalid syntax"
