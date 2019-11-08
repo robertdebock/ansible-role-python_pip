@@ -83,8 +83,6 @@ This role has been tested on these [container images](https://hub.docker.com/):
 
 |container|tag|allow_failures|
 |---------|---|--------------|
-|amazonlinux|1|no|
-|amazonlinux|latest|no|
 |alpine|latest|no|
 |alpine|edge|yes|
 |debian|unstable|yes|
@@ -102,15 +100,17 @@ This role has been tested on these Ansible versions:
 - ansible>=2.9
 - git+https://github.com/ansible/ansible.git@devel
 
+Exceptions
+----------
 
-Included version(s)
--------------------
+Some variarations of the build matrix do not work. These are the variations and reasons why the build won't work:
 
-This role [refers to a version](https://github.com/robertdebock/ansible-role-python_pip/blob/master/defaults/main.yml) released by PyPi. Check the released version(s) here:
-- [pip](https://pypi.org/project/pip/).
-- [setuptools](https://pypi.org/project/setuptools/).
+| variation                 | reason                 |
+|---------------------------|------------------------|
+| amazonline:1 | ImportError: No module named pkg_resources |
+| amazonline | ImportError: No module named pkg_resources |
 
-This version reference means a role may get outdated. Monthly tests occur to see if [bit-rot](https://en.wikipedia.org/wiki/Software_rot) occured. If you however find a problem, please create an issue, I'll get on it as soon as possible.
+
 
 Testing
 -------
