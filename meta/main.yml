@@ -39,6 +39,5 @@ galaxy_info:
     - system
     - installer
     - centos
-    - ubuntu
 
 dependencies: []
