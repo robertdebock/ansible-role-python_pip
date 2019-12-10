@@ -8,3 +8,4 @@
     - name: install pip module
       pip:
         name: ansible
+        state: present

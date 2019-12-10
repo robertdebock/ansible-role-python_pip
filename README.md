@@ -47,6 +47,7 @@ After running this role, this playbook runs to verify that everything works, thi
     - name: install pip module
       pip:
         name: ansible
+        state: present
 ```
 ```
 
