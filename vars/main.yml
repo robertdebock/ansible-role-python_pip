@@ -5,9 +5,6 @@ _python_pip_packages:
     - py-pip
     - py-setuptools
     - python2-dev
-  Archlinux:
-    - python-pip
-    - python-setuptools
   Debian:
     - python3-pip
     - python3-setuptools
