@@ -50,6 +50,10 @@ After running this role, this playbook runs to verify that everything works, thi
       pip:
         name: ansible
         state: present
+
+    - name: check if bootstrap still works.
+      include_role:
+        name: robertdebock.bootstrap
 ```
 
 Also see a [full explanation and example](https://robertdebock.nl/how-to-use-these-roles.html) on how to use these roles.

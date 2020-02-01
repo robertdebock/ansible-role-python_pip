@@ -9,3 +9,7 @@
       pip:
         name: ansible
         state: present
+
+    - name: check if bootstrap still works.
+      include_role:
+        name: robertdebock.bootstrap
