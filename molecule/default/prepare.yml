@@ -6,5 +6,5 @@
 
   roles:
     - robertdebock.bootstrap
-    - robertdebock.epel
+    # - robertdebock.epel
     - robertdebock.buildtools
