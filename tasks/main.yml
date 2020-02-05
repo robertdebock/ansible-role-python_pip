@@ -22,8 +22,7 @@
     name: "{{ item.name }}"
     state: present
     version: "{{ item.version | default(omit) }}"
-  with_items:
-    - "{{ python_pip_modules }}"
+  loop: "{{ python_pip_modules }}"
   loop_control:
     label: "{{ item.name }}"
   register: install_requested_modules
