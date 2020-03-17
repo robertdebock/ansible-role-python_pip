@@ -15,7 +15,6 @@ env:
     namespace="robertdebock"
   matrix:
     - image="alpine" tag="latest"
-    - image="alpine" tag="edge"
     - image="debian" tag="latest"
     - image="debian" tag="testing"
     - image="debian" tag="unstable"
