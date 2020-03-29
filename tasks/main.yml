@@ -8,6 +8,14 @@
   until: python_pip_install_python_pip is succeeded
   retries: 3
 
+- name: update pip
+  pip:
+    name: pip
+    state: latest
+  register: python_pip_update_pip
+  until: python_pip_update_pip is succeeded
+  retries: 3
+
 - name: configure pip proxy
   ini_file:
     path: /etc/pip.conf
