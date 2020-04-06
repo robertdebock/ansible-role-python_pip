@@ -25,6 +25,15 @@
   when:
     - python_pip_proxy is defined
 
+- name: trust hosts
+  ini_file:
+    path: /etc/pip.conf
+    section: global
+    option: trusted-host
+    value: "{{ python_pip_trusted_host }}"
+  when:
+    - python_pip_trusted_host is defined
+
 - name: install requested modules
   pip:
     name: "{{ item.name }}"
