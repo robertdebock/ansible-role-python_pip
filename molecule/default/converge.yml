@@ -5,4 +5,4 @@
   gather_facts: yes
 
   roles:
-    - ansible-role-python_pip
+    - role: ansible-role-python_pip
