@@ -13,3 +13,8 @@
     - name: check if bootstrap still works.
       include_role:
         name: robertdebock.bootstrap
+
+  roles:
+    - role: ansible-role-python_pip
+      python_pip_modules:
+        - name: molecule
