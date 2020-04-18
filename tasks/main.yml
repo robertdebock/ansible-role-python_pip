@@ -13,6 +13,7 @@
     - name: try pip 3
       command: pip3
       check_mode: no
+      changed_when: no
     - name: use pip3
       set_fact:
         python_pip_executable: pip3
