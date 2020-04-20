@@ -8,9 +8,9 @@ _python_pip_packages:
   Debian:
     - python3-pip
     - python3-setuptools
-  RedHat-7:
-    - python2-pip
-    - python-setuptools
+  # RedHat-7:
+  #   - python2-pip
+  #   - python-setuptools
   RedHat:
     - python3-pip
     - python3-setuptools

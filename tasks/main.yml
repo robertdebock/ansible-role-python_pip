@@ -10,7 +10,7 @@
 
 - name: discover pip executable
   block:
-    - name: try pip 3
+    - name: try pip 3 (allowed to fail)
       command: pip3
       check_mode: no
       changed_when: no
