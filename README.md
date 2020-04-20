@@ -51,6 +51,11 @@ For verification `molecule/resources/verify.yml` run after the role has been app
     - name: check if bootstrap still works.
       include_role:
         name: robertdebock.bootstrap
+
+  roles:
+    - role: robertdebock.python_pip
+      python_pip_modules:
+        - name: molecule
 ```
 
 Also see a [full explanation and example](https://robertdebock.nl/how-to-use-these-roles.html) on how to use these roles.
