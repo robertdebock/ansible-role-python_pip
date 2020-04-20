@@ -60,7 +60,7 @@ jobs:
         with:
           path: "${{ github.repository }}"
       - name: add selinux python bindings
-        run: sudo apt-get install python-selinux
+        run: sudo apt-get install python3-selinux
       - name: disable apparmor for mysql
         run: sudo ln -s /etc/apparmor.d/usr.sbin.mysqld /etc/apparmor.d/disable/
       - name: parse apparmor for mysql
