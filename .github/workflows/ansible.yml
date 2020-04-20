@@ -59,6 +59,8 @@ jobs:
         uses: actions/checkout@v2
         with:
           path: "${{ github.repository }}"
+      - name: add selinux python bindings
+        run: apt-get install python-selinux
       - name: disable apparmor for mysql
         run: sudo ln -s /etc/apparmor.d/usr.sbin.mysqld /etc/apparmor.d/disable/
       - name: parse apparmor for mysql
