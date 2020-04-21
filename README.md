@@ -55,7 +55,7 @@ For verification `molecule/resources/verify.yml` run after the role has been app
   roles:
     - role: robertdebock.python_pip
       python_pip_modules:
-        - name: molecule
+        - name: ansible
 ```
 
 Also see a [full explanation and example](https://robertdebock.nl/how-to-use-these-roles.html) on how to use these roles.

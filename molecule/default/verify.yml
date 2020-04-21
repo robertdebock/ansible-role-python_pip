@@ -17,4 +17,4 @@
   roles:
     - role: ansible-role-python_pip
       python_pip_modules:
-        - name: molecule
+        - name: ansible
