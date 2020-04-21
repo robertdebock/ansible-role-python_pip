@@ -8,25 +8,10 @@
   until: python_pip_install_python_pip is succeeded
   retries: 3
 
-- name: discover pip executable
-  block:
-    - name: try pip 3 (allowed to fail)
-      command: pip3
-      check_mode: no
-      changed_when: no
-    - name: use pip3
-      set_fact:
-        python_pip_executable: pip3
-  rescue:
-    - name: use pip 2
-      set_fact:
-        python_pip_executable: pip
-
 - name: update pip
   pip:
     name: pip
     state: latest
-    executable: "{{ python_pip_executable }}"
   register: python_pip_update_pip
   until: python_pip_update_pip is succeeded
   retries: 3
