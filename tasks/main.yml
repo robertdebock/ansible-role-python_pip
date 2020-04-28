@@ -11,7 +11,7 @@
 - name: update pip
   pip:
     name: pip
-    state: latest
+    state: latest # noqa 403 The latest version of pip is required.
   register: python_pip_update_pip
   until: python_pip_update_pip is succeeded
   retries: 3
