@@ -42,6 +42,6 @@
   loop: "{{ python_pip_modules }}"
   loop_control:
     label: "{{ item.name }}"
-  register: install_requested_modules
-  until: install_requested_modules is succeeded
+  register: python_pip_install_requested_modules
+  until: python_pip_install_requested_modules is succeeded
   retries: 3
