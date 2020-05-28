@@ -52,10 +52,12 @@ For verification `molecule/resources/verify.yml` run after the role has been app
       include_role:
         name: robertdebock.bootstrap
 
-  roles:
-    - role: robertdebock.python_pip
-      python_pip_modules:
-        - name: ansible
+    - name: check if requested modules can be installed
+      include_role:
+        name: robertdebock.python_pip
+      vars:
+        python_pip_modules:
+          - name: ansible-lint
 ```
 
 Also see a [full explanation and example](https://robertdebock.nl/how-to-use-these-roles.html) on how to use these roles.
@@ -100,7 +102,7 @@ Here is an overview of related roles:
 
 ## Compatibility
 
-This role has been tested on these [container images](https://hub.docker.com/):
+This role has been tested on these [container images](https://hub.docker.com/u/robertdebock):
 
 |container|tags|
 |---------|----|
