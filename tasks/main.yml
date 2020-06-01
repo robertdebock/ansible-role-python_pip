@@ -9,7 +9,7 @@
   retries: 3
 
 - name: set pip alternatives
-  alternativeS:
+  alternatives:
     name: pip
     path: /usr/local/bin/pip
   when:
