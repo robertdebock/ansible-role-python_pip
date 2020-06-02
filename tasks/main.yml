@@ -8,13 +8,6 @@
   until: python_pip_install_python_pip is succeeded
   retries: 3
 
-- name: set pip alternatives
-  alternatives:
-    name: pip
-    path: /usr/local/bin/pip
-  when:
-    - ansible_os_family == "Suse"
-
 - name: update pip
   pip:
     name: pip
@@ -22,8 +15,13 @@
   register: python_pip_update_pip
   until: python_pip_update_pip is succeeded
   retries: 3
-  environment:
-    PATH: "/bin:/usr/bin"
+
+- name: set pip alternatives
+  alternatives:
+    name: pip
+    path: /usr/local/bin/pip2.7
+  when:
+    - ansible_os_family == "Suse"
 
 - name: configure pip proxy
   ini_file:
