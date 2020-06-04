@@ -2,9 +2,9 @@
 
 Install pythons pip on your system.
 
-|Travis|GitHub|Quality|Downloads|
-|------|------|-------|---------|
-|[![travis](https://travis-ci.com/robertdebock/ansible-role-python_pip.svg?branch=master)](https://travis-ci.com/robertdebock/ansible-role-python_pip)|[![github](https://github.com/robertdebock/ansible-role-python_pip/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-python_pip/actions)|[![quality](https://img.shields.io/ansible/quality/42440)](https://galaxy.ansible.com/robertdebock/python_pip)|[![downloads](https://img.shields.io/ansible/role/d/42440)](https://galaxy.ansible.com/robertdebock/python_pip)|
+|Travis|GitHub|Quality|Downloads|Version|
+|------|------|-------|---------|-------|
+|[![travis](https://travis-ci.com/robertdebock/ansible-role-python_pip.svg?branch=master)](https://travis-ci.com/robertdebock/ansible-role-python_pip)|[![github](https://github.com/robertdebock/ansible-role-python_pip/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-python_pip/actions)|[![quality](https://img.shields.io/ansible/quality/42440)](https://galaxy.ansible.com/robertdebock/python_pip)|[![downloads](https://img.shields.io/ansible/role/d/42440)](https://galaxy.ansible.com/robertdebock/python_pip)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-python_pip.svg)](https://github.com/robertdebock/ansible-role-python_pip/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
