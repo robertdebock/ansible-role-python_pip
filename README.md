@@ -68,6 +68,7 @@ These variables are set in `defaults/main.yml`:
 ```yaml
 ---
 # defaults file for python_pip
+
 # By default no modules should be installed.
 python_pip_modules: []
 
