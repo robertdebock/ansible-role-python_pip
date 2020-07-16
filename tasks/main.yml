@@ -7,17 +7,11 @@
   package:
     name: "{{ python_pip_packages }}"
     state: present
-  register: python_pip_install_python_pip
-  until: python_pip_install_python_pip is succeeded
-  retries: 3
 
 - name: update pip
   pip:
     name: pip
     state: latest # noqa 403 The latest version of pip is required.
-  register: python_pip_update_pip
-  until: python_pip_update_pip is succeeded
-  retries: 3
 
 - name: set pip alternatives
   alternatives:
@@ -52,6 +46,3 @@
   loop: "{{ python_pip_modules }}"
   loop_control:
     label: "{{ item.name }}"
-  register: python_pip_install_requested_modules
-  until: python_pip_install_requested_modules is succeeded
-  retries: 3
