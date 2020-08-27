@@ -26,6 +26,7 @@
     section: global
     option: index-url
     value: "{{ python_pip_proxy }}"
+    mode: "0644"
   when:
     - python_pip_proxy is defined
 
@@ -35,6 +36,7 @@
     section: global
     option: trusted-host
     value: "{{ python_pip_trusted_host }}"
+    mode: "0644"
   when:
     - python_pip_trusted_host is defined
 
