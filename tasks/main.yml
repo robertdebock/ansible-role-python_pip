@@ -8,13 +8,6 @@
     name: "{{ python_pip_packages }}"
     state: present
 
-# - name: set pip alternatives
-#   alternatives:
-#     name: pip
-#     path: /usr/local/bin/pip2.7
-#   when:
-#     - ansible_os_family == "Suse"
-
 - name: configure pip proxy
   ini_file:
     path: /etc/pip.conf
@@ -34,11 +27,6 @@
     mode: "0644"
   when:
     - python_pip_trusted_host is defined
-
-# - name: update pip
-#   pip:
-#     name: pip
-#     state: latest  # noqa 403 The latest version of pip is required.
 
 - name: install requested modules
   pip:
