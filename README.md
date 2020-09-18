@@ -34,30 +34,35 @@ The machine may need to be prepared using `molecule/resources/prepare.yml`:
     - role: robertdebock.buildtools
 ```
 
-For verification `molecule/resources/verify.yml` run after the role has been applied.
+For verification `molecule/resources/verify.yml` runs after the role has been applied.
 ```yaml
 ---
 - name: Verify
   hosts: all
   become: yes
-  gather_facts: yes
+  gather_facts: no
 
   tasks:
     - name: install pip module
       pip:
-        name: ansible
+        name: docker
         state: present
 
     - name: check if bootstrap still works.
       include_role:
         name: robertdebock.bootstrap
 
+    - name: remove pip module
+      pip:
+        name: docker
+        state: absent
+
     - name: check if requested modules can be installed
       include_role:
         name: robertdebock.python_pip
       vars:
         python_pip_modules:
-          - name: ansible-lint
+          - name: docker
 ```
 
 Also see a [full explanation and example](https://robertdebock.nl/how-to-use-these-roles.html) on how to use these roles.
@@ -168,6 +173,11 @@ image="debian" tag="stable" tox
 
 Apache-2.0
 
+## [Contributors](#contributors)
+
+I'd like to thank everybody that made contributions to this repository. It motivates me, improves the code and is just fun to collaborate.
+
+- [rohankrishnadev](https://github.com/rohankrishnadev)
 
 ## [Author Information](#author-information)
 
