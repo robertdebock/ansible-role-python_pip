@@ -6,9 +6,9 @@ _python_pip_packages:
     - py3-pip
     - py3-setuptools
     - python3-dev
-  Debian-10:
-    - python-pip
-    - python-setuptools
+  # Debian-10:
+  #   - python-pip
+  #   - python-setuptools
   Debian:
     - python3-pip
     - python3-setuptools
