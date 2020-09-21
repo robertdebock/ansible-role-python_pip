@@ -1,6 +1,6 @@
 ---
 exceptions:
-  - variation: amazonline:1
+  - variation: amazonlinux
     reason: "ImportError: No module named pkg_resources"
-  - variation: amazonline
-    reason: "ImportError: No module named pkg_resources"
+  - variation: alpine
+    reason: "Failed to create temporary directory."

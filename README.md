@@ -112,7 +112,6 @@ This role has been tested on these [container images](https://hub.docker.com/u/r
 
 |container|tags|
 |---------|----|
-|alpine|all|
 |el|7, 8|
 |debian|buster, bullseye|
 |fedora|31, 32|
@@ -131,8 +130,8 @@ Some variarations of the build matrix do not work. These are the variations and 
 
 | variation                 | reason                 |
 |---------------------------|------------------------|
-| amazonline:1 | ImportError: No module named pkg_resources |
-| amazonline | ImportError: No module named pkg_resources |
+| amazonlinux | ImportError: No module named pkg_resources |
+| alpine | Failed to create temporary directory. |
 
 
 ## [Testing](#testing)
