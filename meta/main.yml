@@ -35,6 +35,5 @@ galaxy_info:
     - pypip
     - system
     - installer
-    - centos
 
 dependencies: []
