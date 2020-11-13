@@ -33,14 +33,16 @@ jobs:
       fail-fast: false
       matrix:
         config:
-          - image: "centos"
-            tag: "7"
-          - image: "centos"
+          - image: "alpine"
             tag: "latest"
           - image: "debian"
             tag: "latest"
           - image: "debian"
             tag: "bullseye"
+          - image: "centos"
+            tag: "7"
+          - image: "centos"
+            tag: "latest"
           - image: "fedora"
             tag: "32"
           - image: "fedora"
