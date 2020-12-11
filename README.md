@@ -2,9 +2,9 @@
 
 Install pythons pip on your system.
 
-|Travis|GitHub|Quality|Downloads|Version|
-|------|------|-------|---------|-------|
-|[![travis](https://travis-ci.com/robertdebock/ansible-role-python_pip.svg?branch=master)](https://travis-ci.com/robertdebock/ansible-role-python_pip)|[![github](https://github.com/robertdebock/ansible-role-python_pip/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-python_pip/actions)|[![quality](https://img.shields.io/ansible/quality/42440)](https://galaxy.ansible.com/robertdebock/python_pip)|[![downloads](https://img.shields.io/ansible/role/d/42440)](https://galaxy.ansible.com/robertdebock/python_pip)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-python_pip.svg)](https://github.com/robertdebock/ansible-role-python_pip/releases/)|
+|Travis|GitHub|GitLab|Quality|Downloads|Version|
+|------|------|------|-------|---------|-------|
+|[![travis](https://travis-ci.com/robertdebock/ansible-role-python_pip.svg?branch=master)](https://travis-ci.com/robertdebock/ansible-role-python_pip)|[![github](https://github.com/robertdebock/ansible-role-python_pip/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-python_pip/actions)|[![gitlab](https://gitlab.com/robertdebock/ansible-role-python_pip/badges/master/pipeline.svg)](https://gitlab.com/robertdebock/ansible-role-python_pip)|[![quality](https://img.shields.io/ansible/quality/42440)](https://galaxy.ansible.com/robertdebock/python_pip)|[![downloads](https://img.shields.io/ansible/role/d/42440)](https://galaxy.ansible.com/robertdebock/python_pip)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-python_pip.svg)](https://github.com/robertdebock/ansible-role-python_pip/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -55,10 +55,11 @@ python_pip_modules: []
 
 ## [Requirements](#requirements)
 
-- Access to a repository containing packages, likely on the internet.
-- A recent version of Ansible. (Tests run on the current, previous and next release of Ansible.)
+- pip packages listed in [requirements.txt](https://github.com/robertdebock/ansible-role-python_pip/blob/master/requirements.txt).
 
 ## [Status of requirements](#status-of-requirements)
+
+The following roles are used to prepare a system. You may choose to prepare your system in another way, I have tested these roles as well.
 
 | Requirement | Travis | GitHub |
 |-------------|--------|--------|
