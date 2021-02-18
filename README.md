@@ -51,6 +51,9 @@ python_pip_modules: []
 
 # Don't forget to trust foreign pip repositories if you use them.
 # python_pip_trusted_host: my-pip-repository.example.com
+
+# You can have this role update pip, using pip.
+python_pip_update: yes
 ```
 
 ## [Requirements](#requirements)

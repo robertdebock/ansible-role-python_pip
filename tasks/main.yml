@@ -31,10 +31,17 @@
   when:
     - python_pip_trusted_host is defined
 
+- name: update pip
+  pip:
+    name: pip
+    state: latest  # noqa package-latest
+  when:
+    - python_pip_update | bool
+
 - name: install requested modules
   pip:
     name: "{{ item.name }}"
-    state: present
+    state: "{{ item.state | default('present') }}"
     version: "{{ item.version | default(omit) }}"
   loop: "{{ python_pip_modules }}"
   loop_control:
