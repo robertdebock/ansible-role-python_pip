@@ -83,14 +83,13 @@ This role has been tested on these [container images](https://hub.docker.com/u/r
 
 |container|tags|
 |---------|----|
-|alpine|all|
+|el|8|
 |debian|buster, bullseye|
-|el|7, 8|
-|fedora|all|
+|fedora|32, 33|
 |opensuse|all|
 |ubuntu|focal, bionic|
 
-The minimum version of Ansible required is 2.10, tests have been done to:
+The minimum version of Ansible required is 2.1, tests have been done to:
 
 - The previous version.
 - The current version.
@@ -104,6 +103,7 @@ Some variarations of the build matrix do not work. These are the variations and 
 |---------------------------|------------------------|
 | amazonlinux | python2 is installed already. |
 | alpine | Failed to create temporary directory. |
+| centos:7 | CentOS 7 uses python2, which is EOL. |
 
 
 If you find issues, please register them in [GitHub](https://github.com/robertdebock/ansible-role-python_pip/issues)

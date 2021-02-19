@@ -33,7 +33,9 @@
 
 - name: update pip
   pip:
-    name: pip
+    name:
+      - pip
+      - setuptools
     state: latest  # noqa package-latest
   when:
     - python_pip_update | bool
