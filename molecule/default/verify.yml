@@ -6,7 +6,7 @@
 
   tasks:
     - name: install pip module
-      pip:
+      ansible.builtin.pip:
         name: docker
         state: present
 
@@ -15,7 +15,7 @@
         name: robertdebock.bootstrap
 
     - name: remove pip module
-      pip:
+      ansible.builtin.pip:
         name: docker
         state: absent
 
@@ -35,7 +35,7 @@
             state: absent
 
     - name: check if pyOpenSSL can be installed
-      pip:
+      ansible.builtin.pip:
         name: pyOpenSSL
         state: present
       notify:
@@ -43,6 +43,6 @@
 
   handlers:
     - name: remove pyOpenSSL
-      pip:
+      ansible.builtin.pip:
         name: pyOpenSSL
         state: absent
