@@ -11,7 +11,7 @@
         state: present
 
     - name: check if bootstrap still works.
-      include_role:
+      ansible.builtin.include_role:
         name: robertdebock.bootstrap
 
     - name: remove pip module
@@ -20,14 +20,14 @@
         state: absent
 
     - name: check if requested modules can be installed
-      include_role:
+      ansible.builtin.include_role:
         name: ansible-role-python_pip
       vars:
         python_pip_modules:
           - name: docker
 
     - name: check if requested modules can be removed
-      include_role:
+      ansible.builtin.include_role:
         name: ansible-role-python_pip
       vars:
         python_pip_modules:
