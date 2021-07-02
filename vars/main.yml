@@ -9,11 +9,12 @@ _python_pip_packages:
   Debian:
     - python3-pip
     - python3-setuptools
-  RedHat:
+  RedHat: &RHEL
     - python3-pip
     - python3-setuptools
+  Rocky: *RHEL
   Suse:
     - python3-pip
     - python3-setuptools
 
-python_pip_packages: "{{ _python_pip_packages[ansible_os_family] | default(_python_pip_packages['default']) }}"
+python_pip_packages: "{{ _python_pip_packages[ansible_os_family] }}"
