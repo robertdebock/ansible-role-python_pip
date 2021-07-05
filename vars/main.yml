@@ -9,10 +9,10 @@ _python_pip_packages:
   Debian:
     - python3-pip
     - python3-setuptools
-  RedHat: &RHEL
+  RedHat: &redhat_packages
     - python3-pip
     - python3-setuptools
-  Rocky: *RHEL
+  Rocky: *redhat_packages
   Suse:
     - python3-pip
     - python3-setuptools
