@@ -42,6 +42,7 @@
         - remove pyOpenSSL
 
   handlers:
+
     - name: remove pyOpenSSL
       ansible.builtin.pip:
         name: pyOpenSSL
