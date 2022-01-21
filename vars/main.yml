@@ -2,19 +2,31 @@
 # vars file for python_pip
 
 _python_pip_packages:
+  default:
+    - python3-pip
+    - python3-setuptools
   Alpine:
     - py3-pip
     - py3-setuptools
     - python3-dev
-  Debian:
-    - python3-pip
-    - python3-setuptools
-  RedHat: &redhat_packages
-    - python3-pip
-    - python3-setuptools
-  Rocky: *redhat_packages
-  Suse:
-    - python3-pip
-    - python3-setuptools
+  RedHat-7:
+    - python2-pip
+    - python2-setuptools
 
-python_pip_packages: "{{ _python_pip_packages[ansible_os_family] }}"
+python_pip_packages: "{{ _python_pip_packages[ansible_os_family ~ '-' ~ ansible_distribution_major_version] | default(_python_pip_packages[ansible_os_family] | default(_python_pip_packages['default'] )) }}"
+
+_python_pip_pip_package:
+  default:
+    - pip
+    - setuptools
+  RedHat-7:
+    - pip==20.3.4
+    - setuptools
+
+python_pip_pip_package: "{{ _python_pip_pip_package[ansible_os_family ~ '-' ~ ansible_distribution_major_version] | default(_python_pip_pip_package['default'] ) }}"
+
+_python_pip_pip_state:
+  default: latest
+  RedHat-7: present
+
+python_pip_pip_state: "{{ _python_pip_pip_state[ansible_os_family] | default(_python_pip_pip_state['default'] ) }}"
