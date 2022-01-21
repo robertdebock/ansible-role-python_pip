@@ -18,10 +18,8 @@ python_pip_packages: "{{ _python_pip_packages[ansible_os_family ~ '-' ~ ansible_
 _python_pip_pip_package:
   default:
     - pip
-    - setuptools
   RedHat-7:
     - pip==20.3.4
-    - setuptools
 
 python_pip_pip_package: "{{ _python_pip_pip_package[ansible_os_family ~ '-' ~ ansible_distribution_major_version] | default(_python_pip_pip_package['default'] ) }}"
 
