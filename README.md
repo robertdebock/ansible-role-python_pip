@@ -18,7 +18,6 @@ This example is taken from `molecule/default/converge.yml` and is tested on each
 
   roles:
     - role: robertdebock.python_pip
-      python_pip_update: no
 ```
 
 The machine needs to be prepared. In CI this is done using `molecule/default/prepare.yml`:
