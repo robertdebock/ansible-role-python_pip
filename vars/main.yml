@@ -4,8 +4,8 @@
 _python_pip_packages:
   "2":
     default:
-      - python2-pip
-      - python2-setuptools
+      - python-pip
+      - python-setuptools
   "3":
     default:
       - python3-pip
@@ -14,6 +14,10 @@ _python_pip_packages:
       - py3-pip
       - py3-setuptools
       - python3-dev
+
+# Find the list of packages, based on the mapping above and the used python
+# version used for running Ansible.
+python_pip_packages: "{{ _python_pip_packages[ansible_python.version.major][ansible_os_family] | default(_python_pip_packages['3']['default'] ) }}"
 
 _python_pip_pip_package:
   default:

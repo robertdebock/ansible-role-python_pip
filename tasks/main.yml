@@ -7,16 +7,9 @@
   delegate_to: localhost
 
 - name: install python pip
-  block:
-    - name: try python version 3
-      ansible.builtin.package:
-        name: "{{ _python_pip_packages['3'][ansible_os_family] | default(_python_pip_packages['3']['default']) }}"
-        state: present
-  rescue:
-    - name: try python version 2
-      ansible.builtin.package:
-        name: "{{ _python_pip_packages['2']['default'] }}"
-        state: present
+  ansible.builtin.package:
+    name: "{{ python_pip_packages }}"
+    state: present
 
 - name: configure pip proxy
   community.general.ini_file:
