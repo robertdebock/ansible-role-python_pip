@@ -23,6 +23,8 @@ molecule:
       - image: "debian"
         tag: "bookworm"
       - image: "enterpriselinux"
+        tag: "7"
+      - image: "enterpriselinux"
         tag: "latest"
       - image: "fedora"
         tag: "34"
