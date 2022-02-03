@@ -2,11 +2,11 @@
 # vars file for python_pip
 
 _python_pip_packages:
-  "2":
+  2:
     default:
       - python-pip
       - python-setuptools
-  "3":
+  3:
     default:
       - python3-pip
       - python3-setuptools
