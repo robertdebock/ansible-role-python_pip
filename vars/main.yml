@@ -2,11 +2,12 @@
 # vars file for python_pip
 
 _python_pip_packages:
-  2:
+  2: &two
     default:
       - python-pip
       - python-setuptools
-  3:
+  "2": *two
+  3: &three
     default:
       - python3-pip
       - python3-setuptools
@@ -14,6 +15,7 @@ _python_pip_packages:
       - py3-pip
       - py3-setuptools
       - python3-dev
+  "3": *three
 
 # Find the list of packages, based on the mapping above and the used python
 # version used for running Ansible.
