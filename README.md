@@ -46,7 +46,8 @@ The default values for the variables are set in [`defaults/main.yml`](https://gi
 ---
 # defaults file for python_pip
 
-# By default no modules should be installed.
+# By default no modules should be installed. Note: This does not work on Debian Bookworm.
+# See https://peps.python.org/pep-0668/
 python_pip_modules: []
 
 # Connect to a (pypi) proxy by setting this variable.
@@ -96,7 +97,7 @@ This role has been tested on these [container images](https://hub.docker.com/u/r
 |[opensuse](https://hub.docker.com/repository/docker/robertdebock/opensuse/general)|all|
 |[Ubuntu](https://hub.docker.com/repository/docker/robertdebock/ubuntu/general)|all|
 
-The minimum version of Ansible required is 2.10, tests have been done to:
+The minimum version of Ansible required is 2.12, tests have been done to:
 
 - The previous version.
 - The current version.
