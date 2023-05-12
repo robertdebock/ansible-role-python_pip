@@ -5,40 +5,40 @@
   gather_facts: yes
 
   tasks:
-    - name: install pip module
+    - name: Install pip module
       ansible.builtin.pip:
         name: docker
         state: present
       when:
         - ansible_distribution_release != "bookworm"
 
-    - name: check if bootstrap still works.
+    - name: Check if bootstrap still works.
       ansible.builtin.include_role:
         name: robertdebock.bootstrap
 
-    - name: remove pip module
+    - name: Remove pip module
       ansible.builtin.pip:
         name: docker
         state: absent
       when:
         - ansible_distribution_release != "bookworm"
 
-    - name: check if requested modules can be installed
+    - name: Check if requested modules can be installed
       ansible.builtin.include_role:
         name: ansible-role-python_pip
       vars:
         python_pip_modules:
-          - name: docker
+          - name: Docker
 
-    - name: check if requested modules can be removed
+    - name: Check if requested modules can be removed
       ansible.builtin.include_role:
         name: ansible-role-python_pip
       vars:
         python_pip_modules:
-          - name: docker
+          - name: Docker
             state: absent
 
-    - name: check if pyOpenSSL can be installed
+    - name: Check if pyOpenSSL can be installed
       ansible.builtin.pip:
         name: pyOpenSSL
         state: present
@@ -48,7 +48,7 @@
         - ansible_distribution_release != "bookworm"
 
   handlers:
-    - name: remove pyOpenSSL
+    - name: Remove pyOpenSSL
       ansible.builtin.pip:
         name: pyOpenSSL
         state: absent
