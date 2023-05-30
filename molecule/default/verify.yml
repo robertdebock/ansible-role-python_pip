@@ -43,7 +43,7 @@
         name: pyOpenSSL
         state: present
       notify:
-        - remove pyOpenSSL
+        - Remove pyOpenSSL
       when:
         - ansible_distribution_release != "bookworm"
 
