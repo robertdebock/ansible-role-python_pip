@@ -12,6 +12,7 @@
     that:
       - item.name is defined
       - item.name is string
+      - item.name is not none
     quiet: yes
   loop: "{{ python_pip_modules }}"
   loop_control:
@@ -32,6 +33,7 @@
   ansible.builtin.assert:
     that:
       - item.version is string
+      - item.version is not none
     quiet: yes
   loop: "{{ python_pip_modules }}"
   loop_control:
