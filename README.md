@@ -1,4 +1,4 @@
-# Ansible role [python_pip](#python_pip)
+# [Ansible role python_pip](#python_pip)
 
 Install pythons pip on your system.
 
