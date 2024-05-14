@@ -40,6 +40,8 @@
   when:
     - python_pip_update
     - ansible_distribution_release != "bookworm"
+    - ansible_distribution_release != "noble"
+    - ansible_os_family != "Alpine"
 
 - name: Install requested modules
   ansible.builtin.pip:
