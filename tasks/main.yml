@@ -54,3 +54,4 @@
     label: "{{ item.name }}"
   when:
     - ansible_distribution_release != "bookworm"
+    - ansible_os_family != "Alpine"
