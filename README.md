@@ -46,7 +46,7 @@ The default values for the variables are set in [`defaults/main.yml`](https://gi
 ---
 # defaults file for python_pip
 
-# By default no modules should be installed. Note: This does not work on Debian Bookworm.
+# By default no modules should be installed. Note: This does not work on Debian Bookworm and Ubuntu noble.
 # See https://peps.python.org/pep-0668/
 python_pip_modules: []
 
