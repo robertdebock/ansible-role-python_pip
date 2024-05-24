@@ -32,11 +32,6 @@
   when:
     - python_pip_trusted_host is defined
 
-- name: Gather facts about os_family
-  ansible.builtin.setup:
-    gather_subset:
-      - os_family
-
 - name: Update pip
   ansible.builtin.pip:
     name: "{{ python_pip_pip_package }}"
