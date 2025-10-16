@@ -32,7 +32,7 @@
   when:
     - python_pip_trusted_host is defined
 
-- name: Update pip.
+- name: Update pip
   ansible.builtin.pip:
     name: "{{ python_pip_pip_package }}"
     state: "{{ python_pip_pip_state }}"  # noqa package-latest
