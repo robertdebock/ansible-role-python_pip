@@ -1,56 +1,28 @@
 ---
 
-- name: assert | Test python_pip_modules
+- name: assert | Test python_pip_proxy
   ansible.builtin.assert:
     that:
-      - python_pip_modules is defined
-      - python_pip_modules is iterable
+      - python_pip_proxy is string
+      - python_pip_proxy is not none
     quiet: true
-
-- name: assert | Test item.name in python_pip_modules
-  ansible.builtin.assert:
-    that:
-      - item.name is defined
-      - item.name is string
-      - item.name is not none
-    quiet: true
-  loop: "{{ python_pip_modules }}"
-  loop_control:
-    label: "{{ item.name }}"
-
-- name: assert | Test item.state in python_pip_modules
-  ansible.builtin.assert:
-    that:
-      - item.state in [ "absent", "latest", "present" ]
-    quiet: true
-  loop: "{{ python_pip_modules }}"
-  loop_control:
-    label: "{{ item.name }}"
   when:
-    - item.state is defined
+    - python_pip_proxy is defined
 
-- name: assert | Test item.version in python_pip_modules
+- name: assert | Test python_pip_trusted_host
   ansible.builtin.assert:
     that:
-      - item.version is string
-      - item.version is not none
+      - python_pip_trusted_host is string
+      - python_pip_trusted_host is not none
     quiet: true
-  loop: "{{ python_pip_modules }}"
-  loop_control:
-    label: "{{ item.name }}"
   when:
-    - item.version is defined
+    - python_pip_trusted_host is defined
 
-- name: assert | Test python_pip_update
+- name: assert | Test python_pip_executable
   ansible.builtin.assert:
     that:
-      - python_pip_update is defined
-      - python_pip_update is boolean
+      - python_pip_executable is string
+      - python_pip_executable is not none
     quiet: true
-
-- name: assert | Test python_pip_break_system_packages
-  ansible.builtin.assert:
-    that:
-      - python_pip_break_system_packages is defined
-      - python_pip_break_system_packages is boolean
-    quiet: true
+  when:
+    - python_pip_executable is defined

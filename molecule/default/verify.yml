@@ -8,7 +8,6 @@
     - name: Install pip module
       ansible.builtin.pip:
         name: docker
-        state: present
         break_system_packages: true
         extra_args: --break-system-packages
 
