@@ -57,7 +57,7 @@ python_pip_modules: []
 # python_pip_trusted_host: my-pip-repository.example.com
 
 # You can have this role update pip, using pip.
-python_pip_update: true
+python_pip_update: false
 
 # You can use something other than the default pip binary.
 # python_pip_executable: pip3
