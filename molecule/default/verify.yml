@@ -8,16 +8,14 @@
     - name: Install pip module
       ansible.builtin.pip:
         name: docker
-        break_system_packages: true
-        extra_args: --break-system-packages
+      notify: Remove pip module
 
     - name: Check if bootstrap still works.
       ansible.builtin.include_role:
         name: robertdebock.bootstrap
 
+  handlers:
     - name: Remove pip module
       ansible.builtin.pip:
         name: docker
         state: absent
-        break_system_packages: true
-        extra_args: --break-system-packages
