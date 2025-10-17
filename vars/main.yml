@@ -32,3 +32,13 @@ _python_pip_pip_state:
   RedHat-7: present
 
 python_pip_pip_state: "{{ _python_pip_pip_state[ansible_os_family] | default(_python_pip_pip_state['default']) }}"
+
+# Some Ansible versions support a dedicated 'break_system_packages' boolean on the
+# pip module. For broader compatibility, we also prepare a fallback extra_args.
+python_pip_break_flag: "{{ python_pip_break_system_packages | default(false) }}"
+
+_python_pip_extra_args_map:
+  true: "--break-system-packages"
+  false: null
+
+python_pip_extra_args: "{{ _python_pip_extra_args_map[python_pip_break_flag | bool] }}"

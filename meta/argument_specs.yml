@@ -32,3 +32,10 @@ argument_specs:
         default: null
         description: You can use something other than the default pip binary.
         type: str
+      python_pip_break_system_packages:
+        required: false
+        default: false
+        description: >
+          Allow pip to install by breaking system packages on PEP 668 systems
+          (sets pip's --break-system-packages where supported). Disabled by default.
+        type: bool

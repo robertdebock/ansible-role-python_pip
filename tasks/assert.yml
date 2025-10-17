@@ -47,3 +47,10 @@
       - python_pip_update is defined
       - python_pip_update is boolean
     quiet: true
+
+- name: assert | Test python_pip_break_system_packages
+  ansible.builtin.assert:
+    that:
+      - python_pip_break_system_packages is defined
+      - python_pip_break_system_packages is boolean
+    quiet: true

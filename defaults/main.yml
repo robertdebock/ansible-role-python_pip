@@ -16,3 +16,7 @@ python_pip_update: false
 
 # You can use something other than the default pip binary.
 # python_pip_executable: pip3
+
+# Allow installations on PEP 668 externally managed systems by explicitly
+# breaking system packages. Prefer keeping this disabled for safety.
+python_pip_break_system_packages: false
