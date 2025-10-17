@@ -6,8 +6,6 @@
 
   tasks:
     - name: Install pip package (try without flags)
-      notify:
-        - Remove pip package
       block:
         - name: Install pip package
           ansible.builtin.pip:
@@ -22,9 +20,3 @@
     - name: Check if bootstrap still works.
       ansible.builtin.include_role:
         name: robertdebock.bootstrap
-
-  handlers:
-    - name: Remove pip package
-      ansible.builtin.pip:
-        name: docker
-        state: absent
