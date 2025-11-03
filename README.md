@@ -46,18 +46,11 @@ The default values for the variables are set in [`defaults/main.yml`](https://gi
 ---
 # defaults file for python_pip
 
-# By default no modules should be installed. Note: This does not work on Debian Bookworm and Ubuntu noble.
-# See https://peps.python.org/pep-0668/
-python_pip_modules: []
-
 # Connect to a (pypi) proxy by setting this variable.
 # python_pip_proxy: "https://user:password@proxy:8443/artifactory/pypi/pypi-virtual/simple"
 
 # Don't forget to trust foreign pip repositories if you use them.
 # python_pip_trusted_host: my-pip-repository.example.com
-
-# You can have this role update pip, using pip.
-python_pip_update: false
 
 # You can use something other than the default pip binary.
 # python_pip_executable: pip3
