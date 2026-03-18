@@ -17,4 +17,4 @@ _python_pip_packages:
 
 # Find the list of packages, based on the mapping above and the used python
 # version used for running Ansible.
-python_pip_packages: "{{ _python_pip_packages[ansible_python.version.major | int][ansible_os_family] | default(_python_pip_packages[ansible_python.version.major | int]['default'] | default(_python_pip_packages['3']['default'])) }}"
+python_pip_packages: "{{ _python_pip_packages[ansible_facts['python'].version.major | int][ansible_facts['os_family']] | default(_python_pip_packages[ansible_facts['python'].version.major | int]['default'] | default(_python_pip_packages['3']['default'])) }}"
