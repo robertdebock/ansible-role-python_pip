@@ -10,9 +10,11 @@ _python_pip_packages:
     default:
       - python3-pip
       - python3-setuptools
+      - python3-packaging
     Alpine:
       - py3-pip
       - py3-setuptools
+      - py3-packaging
       - python3-dev
 
 # Find the list of packages, based on the mapping above and the used python
